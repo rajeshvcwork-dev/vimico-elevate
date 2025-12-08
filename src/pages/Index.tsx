@@ -61,7 +61,7 @@ const Index = () => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.            
-            </p>
+            <br></p>
 
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
