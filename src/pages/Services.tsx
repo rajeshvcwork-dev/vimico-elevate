@@ -68,9 +68,11 @@ const Services = () => {
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8">
               From mobile innovation to enterprise performance management, we deliver tailored solutions that drive business growth and digital excellence.
             </p>
-            <Button variant="gradient" size="xl">
-              Schedule a Consultation
-            </Button>
+            <Link to="/contact">
+              <Button variant="gradient" size="xl">
+                Schedule a Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -122,9 +124,11 @@ const Services = () => {
               Let's discuss how our expertise can help you achieve your technology goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="gradient" size="xl">
-                Get Started Today
-              </Button>
+              <Link to="/contact">
+                <Button variant="gradient" size="xl">
+                  Get Started Today
+                </Button>
+              </Link>
               <Link to="/portfolio">
                 <Button variant="hero" size="xl">
                   View Our Work

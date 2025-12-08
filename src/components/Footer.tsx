@@ -36,7 +36,7 @@ const Footer = () => {
             <h4 className="font-semibold text-primary-foreground mb-4">Connect</h4>
             <ul className="space-y-2">
               <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Our Partners</Link></li>
-              <li><a href="mailto:contact@vimico.com" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Contact Us</a></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Contact Us</Link></li>
             </ul>
           </div>
         </div>
