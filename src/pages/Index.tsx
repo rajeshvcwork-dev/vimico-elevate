@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroImage from "@/assets/hero-home.jpg";
+import heroPortfolio from "@/assets/hero-portfolio.jpg";
 
 const highlights = [
   "Mobile & Web Development",
@@ -10,7 +12,20 @@ const highlights = [
   "Digital Transformation",
   "Strategic Consulting",
 ];
-
+const featuredProjects = [
+  {
+    image: heroPortfolio,
+    title: "TechStart Rebrand",
+    category: "Branding",
+    description: "Complete brand overhaul for a leading tech startup.",
+  },
+  {
+    image: heroImage,
+    title: "GrowthMax Platform",
+    category: "Digital Product",
+    description: "SaaS platform development for business analytics.",
+  },
+];
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
