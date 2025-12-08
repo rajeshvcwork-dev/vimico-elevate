@@ -68,11 +68,11 @@ const Portfolio = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
                     <div className="text-3xl font-bold gradient-text mb-2">3+</div>
-                    <div className="text-sm text-muted-foreground">New Markets</div>
+                    <div className="text-sm font-bold text-foreground">New Markets</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
                     <div className="text-3xl font-bold gradient-text mb-2">India</div>
-                    <div className="text-sm text-muted-foreground">Key Expansion</div>
+                    <div className="text-sm font-bold text-foreground">Key Expansion</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
                     <div className="text-3xl font-bold gradient-text mb-2">Thailand</div>
