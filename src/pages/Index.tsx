@@ -69,7 +69,9 @@ const Index = () => {
                   Explore Our Services <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/portfolio">
+              <Link 
+                to="/portfolio" className="px-8 py-4 rounded-full border-2 border-background/30 text-background font-medium hover:bg-background/10 transition-all"
+              >
                 <Button variant="outline" size="xl">
                   View Portfolio
                 </Button>
