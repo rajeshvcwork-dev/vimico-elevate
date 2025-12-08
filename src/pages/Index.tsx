@@ -168,7 +168,7 @@ const Index = () => {
               Let's discuss how Vimico can help you achieve your technology goals and drive business growth.
             </p>
             <Link to="/contact">
-              <Button variant="gradient" size="xl">
+              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                 Schedule a Consultation
               </Button>
             </Link>
