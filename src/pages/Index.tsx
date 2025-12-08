@@ -46,13 +46,11 @@ const Index = () => {
               <span className="text-sm font-medium text-primary">Technology Solutions Partner</span>
             </div>
             
-             <h1 className="text-5xl md:text-7xl font-display font-bold text-background mb-6 animate-fade-up-delay-1 leading-tight">
-              Your Path to{" "}
-              <span className="text-gradient-accent">Success</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Transforming Ideas into <span className="gradient-text">Digital Reality</span>
             </h1>
-            
-            <p className="text-xl text-background/80 mb-8 animate-fade-up-delay-2 leading-relaxed">
-              We partner with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.            
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
