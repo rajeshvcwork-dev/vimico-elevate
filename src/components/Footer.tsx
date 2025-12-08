@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <img src={vimicoLogo} alt="Vimico" className="h-12 w-auto brightness-0 invert" />
+            <img src={vimicoLogo} alt="Vimico" className="h-16 w-auto" />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Empowering businesses with innovative technology solutions and strategic digital transformation.
             </p>
