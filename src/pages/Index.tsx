@@ -63,7 +63,7 @@ const Index = () => {
               Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.<br></br>
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
+            <div className="flex flex-col sm:flex-row gap-2 justify-center mb-16 animate-fade-up delay-300">
               <Link to="/services">
                 <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                   Explore Our Services <ArrowRight className="w-5 h-5" />
