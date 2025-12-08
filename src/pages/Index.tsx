@@ -59,7 +59,7 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Transforming Ideas into <span className="gradient-text">Digital Reality</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed" **mb-12**>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed" mb-16>
               Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.<br></br>
             </p>
 
