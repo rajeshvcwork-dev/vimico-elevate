@@ -7,10 +7,11 @@ import heroImage from "@/assets/hero-home.jpg";
 import heroPortfolio from "@/assets/hero-portfolio.jpg";
 
 const highlights = [
-  "Mobile & Web Development",
-  "Enterprise Solutions",
-  "Digital Transformation",
+  "Agile Implementation",
+  "Enterprise Partnership",
+  "Portfolio Building",
   "Strategic Consulting",
+  "Training & Development",
 ];
 const featuredProjects = [
   {
@@ -45,13 +46,13 @@ const Index = () => {
               <span className="text-sm font-medium text-primary">Technology Solutions Partner</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight animate-fade-up delay-100">
-              Transforming Ideas into{" "}
-              <span className="gradient-text">Digital Excellence</span>
+             <h1 className="text-5xl md:text-7xl font-display font-bold text-background mb-6 animate-fade-up-delay-1 leading-tight">
+              Your Path to{" "}
+              <span className="text-gradient-accent">Success</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up delay-200">
-              Vimico delivers premium technology solutions that empower businesses to thrive in the digital age. From mobile innovation to enterprise transformation.
+            <p className="text-xl text-background/80 mb-8 animate-fade-up-delay-2 leading-relaxed">
+              We partner with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
