@@ -76,11 +76,11 @@ const Portfolio = () => {
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
                     <div className="text-3xl font-bold gradient-text mb-2">Thailand</div>
-                    <div className="text-sm text-muted-foreground">Growth Region</div>
+                    <div className="text-sm font-bold text-gray-900">Growth Region</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
                     <div className="text-3xl font-bold gradient-text mb-2">Africa</div>
-                    <div className="text-sm text-muted-foreground">Emerging Market</div>
+                    <div className="text-sm font-bold text-gray-900">Emerging Market</div>
                   </div>
                 </div>
               </div>
