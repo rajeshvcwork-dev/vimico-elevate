@@ -70,8 +70,8 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/portfolio">
-                <Button variant="outline" size="xl">   
-                  View Portfolio
+                <Button variant="outline" size="xl" className="gap-2">   
+                  View Portfolio <ArrowRight className="w-5 h-5" />
                 </Button>  
               </Link>
             </div>
