@@ -65,12 +65,14 @@ const Index = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
               <Link to="/services">
-                <Button variant="gradient" size="xl" className="gap-2">
+                <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                   Explore Our Services <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Link to="/portfolio" className="px-8 py-4 rounded-full border-2 border-background/30 text-background font-medium hover:bg-background/10 transition-all">
+              <Link to="/portfolio">
+                <Button variant="outline" size="xl">   
                   View Portfolio
+                </Button>  
               </Link>
             </div>
 
