@@ -60,10 +60,9 @@ const Index = () => {
               Transforming Ideas into <span className="gradient-text">Digital Reality</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.
+              Vimico partners with ambitious businesses to unlock their full potential through strategic consulting, innovative solutions, and transformative growth.<br></br>
             </p>
 
-            <p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up delay-300">
               <Link to="/services">
                 <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
