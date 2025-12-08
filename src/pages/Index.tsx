@@ -76,7 +76,7 @@ const Index = () => {
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-up delay-400">
+            <div className="flex flex-wrap justify-center gap-2 animate-fade-up delay-400">
               {highlights.map((item) => (
                 <div
                   key={item}
