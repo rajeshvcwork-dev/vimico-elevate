@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Services", path: "/services" },
     { name: "Portfolio", path: "/portfolio" },
     { name: "Products", path: "/products" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -43,9 +44,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="gradient" size="default">
-              Get in Touch
-            </Button>
+            <Link to="/contact">
+              <Button variant="gradient" size="default">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,9 +79,11 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="px-4 pt-4">
-                <Button variant="gradient" size="lg" className="w-full">
-                  Get in Touch
-                </Button>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                  <Button variant="gradient" size="lg" className="w-full">
+                    Get in Touch
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

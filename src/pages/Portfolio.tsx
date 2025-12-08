@@ -1,5 +1,6 @@
 import { ExternalLink, Globe, Handshake, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -172,9 +173,11 @@ const Portfolio = () => {
             <p className="text-muted text-lg mb-8">
               Join our growing network of strategic partners and unlock new opportunities for growth and innovation.
             </p>
-            <Button variant="gradient" size="xl">
-              Explore Partnership Opportunities
-            </Button>
+            <Link to="/contact">
+              <Button variant="gradient" size="xl">
+                Explore Partnership Opportunities
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Sparkles, Palette, Leaf, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -149,9 +150,16 @@ const Products = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-5 py-3 rounded-xl bg-card/10 border border-card/20 text-primary-foreground placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-primary/50"
               />
-              <Button variant="gradient" size="lg">
+              <Button variant="gradient" size="lg" disabled className="opacity-70">
                 Notify Me
               </Button>
+            </div>
+            <div className="mt-6">
+              <Link to="/contact">
+                <Button variant="hero" size="lg">
+                  Contact Us Instead
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
