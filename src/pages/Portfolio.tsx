@@ -57,7 +57,7 @@ const Portfolio = () => {
                 rel="noopener noreferrer"
                 className="inline-block mt-6"
               >
-                <Button variant="gradient" className="gap-2">
+                <Button variant="gradient" className="gap-2 rounded-full border-2">
                   Visit iZND Group <ExternalLink className="w-4 h-4" />
                 </Button>
               </a>
@@ -154,7 +154,7 @@ const Portfolio = () => {
                 rel="noopener noreferrer"
                 className="inline-block mt-6"
               >
-                <Button variant="gradient" className="gap-2">
+                <Button variant="gradient" className="gap-2 rounded-full border-2">
                   Visit MediSure Healthcare <ExternalLink className="w-4 h-4" />
                 </Button>
               </a>
@@ -174,7 +174,7 @@ const Portfolio = () => {
               Join our growing network of strategic partners and unlock new opportunities for growth and innovation.
             </p>
             <Link to="/contact">
-              <Button variant="gradient" size="xl">
+              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2>
                 Explore Partnership Opportunities
               </Button>
             </Link>
