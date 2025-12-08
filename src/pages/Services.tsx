@@ -7,17 +7,22 @@ import servicesHero from "@/assets/services-hero.jpg";
 
 const services = [
   {
-    title: "Mobile Development",
-    description: "Transform your business with cutting-edge mobile applications. We specialize in native and cross-platform development, delivering seamless user experiences that drive engagement and growth across iOS and Android platforms.",
-  },
-  {
-    title: "EPM Solutions (Jedox)",
-    description: "Unlock the power of Enterprise Performance Management with Jedox. We help organizations streamline budgeting, planning, and forecasting processes with intelligent analytics and real-time reporting capabilities.",
+    title: "Agile Methodology Implementation",
+    description: "Accelerate your project delivery with proven Agile practices. We guide small to mid-level companies through Agile transformation, implementing Scrum or Kanban frameworks tailored to your team's needs.",
   },
   {
     title: "Power BI Projects",
     description: "Turn your data into actionable insights with Microsoft Power BI. Our experts design custom dashboards and reports that visualize complex data, enabling data-driven decision-making across your organization.",
   },
+  {
+    title: "Data Sanity",
+    description: "A specialized service that detects anomalies, fixes inconsistencies, and keeps your data continuously business-ready.",
+  },
+  {
+    title: "EPM Solutions",
+    description: "Unlock the power of Enterprise Performance Management. We help organizations streamline budgeting, planning, and forecasting processes with intelligent analytics and real-time reporting capabilities.",
+  },
+ 
   {
     title: "Website Development",
     description: "Create stunning, high-performance websites that captivate your audience. From corporate portals to e-commerce platforms, we build responsive, SEO-optimized websites that represent your brand excellence.",
@@ -25,10 +30,6 @@ const services = [
   {
     title: "Portfolio Sites for Individuals",
     description: "Showcase your professional journey with a personalized portfolio website. We craft visually striking, memorable sites that highlight your skills, projects, and achievements to potential clients and employers.",
-  },
-  {
-    title: "Agile Methodology Implementation",
-    description: "Accelerate your project delivery with proven Agile practices. We guide small to mid-level companies through Agile transformation, implementing Scrum or Kanban frameworks tailored to your team's needs.",
   },
   {
     title: "Jira & Salesforce Setup",
