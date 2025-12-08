@@ -174,7 +174,7 @@ const Portfolio = () => {
               Join our growing network of strategic partners and unlock new opportunities for growth and innovation.
             </p>
             <Link to="/contact">
-              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2>
+              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                 Explore Partnership Opportunities
               </Button>
             </Link>
