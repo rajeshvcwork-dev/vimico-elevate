@@ -13,6 +13,14 @@ const highlights = [
   "Strategic Consulting",
   "Training & Development",
 ];
+
+const stats = [
+  { value: "27+", label: "Projects Completed" },
+  { value: "98%", label: "Client Satisfaction" },
+  { value: "20+", label: "Team Experts" },
+  { value: "2+", label: "Decades Experience" },
+];
+
 const featuredProjects = [
   {
     image: heroPortfolio,
@@ -28,12 +36,7 @@ const featuredProjects = [
   },
 ];
 
-const stats = [
-  { value: "27+", label: "Projects Completed" },
-  { value: "98%", label: "Client Satisfaction" },
-  { value: "20+", label: "Team Experts" },
-  { value: "2+", label: "Decades Experience" },
-];
+
 
 const Index = () => {
   return (
