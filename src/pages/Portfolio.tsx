@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import portfolioHero from "@/assets/hero-portfolio.jpg";
 
 const Portfolio = () => {
   return (
@@ -12,6 +13,11 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="container mx-auto px-4 lg:px-8">
+           <img 
+            src={portfolioHero} 
+            alt="Services" 
+            className="w-full h-full object-cover"
+          />
           <div className="text-center max-w-3xl mx-auto animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Strategic Partnerships
