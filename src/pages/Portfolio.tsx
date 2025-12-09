@@ -15,7 +15,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-4 lg:px-8">
            <img 
             src={portfolioHero} 
-            alt="Services" 
+            alt="Portfolio" 
             className="w-full h-full object-cover"
           />
           <div className="text-center max-w-3xl mx-auto animate-fade-up">
