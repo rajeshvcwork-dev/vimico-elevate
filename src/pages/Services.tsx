@@ -63,11 +63,11 @@ const Services = () => {
               Our Expertise
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Premium Technology{" "}
-              <span className="gradient-text">Solutions</span>
+              From Project Chaos to{" "}
+              <span className="gradient-text">Predictable Success</span>
             </h1>
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8">
-              From mobile innovation to enterprise performance management, we deliver tailored solutions that drive business growth and digital excellence.
+              Empowering Tech Teams to Deliver Better, Faster, and Smarter, we deliver tailored solutions that drive business growth and digital excellence — the Vimico Way
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
