@@ -12,7 +12,7 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24">
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="absolute inset-0">
            <img 
             src={portfolioHero} 
             alt="Portfolio" 
