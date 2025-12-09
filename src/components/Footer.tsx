@@ -16,10 +16,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary-foreground mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Mobile Development</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">EPM Solutions</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Building</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Agile Consulting</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">PowerBI Solutions</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Building</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Enterprise Tools</Link></li>
             </ul>
           </div>
 
