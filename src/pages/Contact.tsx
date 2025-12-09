@@ -10,14 +10,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const services = [
-  "Mobile Development",
-  "EPM Solutions (Jedox)",
+  "Agile Implementation",
+  "Jira & Salesforce Setup",
+  "EPM Solutions",
   "Power BI Projects",
   "Website Development",
   "Portfolio Sites",
-  "Agile Implementation",
-  "Jira & Salesforce Setup",
-  "Support Infrastructure",
+  "Support Setup",
   "Partnership Inquiry",
   "Other",
 ];
