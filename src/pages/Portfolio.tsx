@@ -12,12 +12,7 @@ const Portfolio = () => {
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-40 lg:pb-24">
-        <div className="absolute inset-0">
-           <img 
-            src={portfolioHero} 
-            alt="Portfolio" 
-            className="w-full h-full object-cover"
-          />
+        <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center max-w-3xl mx-auto animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Strategic Partnerships
