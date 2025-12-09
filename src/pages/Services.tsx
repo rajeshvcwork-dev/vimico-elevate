@@ -59,7 +59,7 @@ const Services = () => {
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-3xl animate-fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Our Expertise
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
@@ -70,7 +70,7 @@ const Services = () => {
               From mobile innovation to enterprise performance management, we deliver tailored solutions that drive business growth and digital excellence.
             </p>
             <Link to="/contact">
-              <Button variant="gradient" size="xl">
+              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                 Schedule a Consultation
               </Button>
             </Link>
@@ -126,12 +126,12 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button variant="gradient" size="xl">
+                <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                   Get Started Today
                 </Button>
               </Link>
               <Link to="/portfolio">
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="xl" className="gap-2 rounded-full border-2">
                   View Our Work
                 </Button>
               </Link>
