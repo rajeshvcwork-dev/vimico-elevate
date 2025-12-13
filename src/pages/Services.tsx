@@ -19,8 +19,8 @@ const services = [
     description: "A specialized service that detects anomalies, fixes inconsistencies, and keeps your data continuously business-ready.",
   },
   {
-    title: "EPM Solutions",
-    description: "Unlock the power of Enterprise Performance Management. We help organizations streamline budgeting, planning, and forecasting processes with intelligent analytics and real-time reporting capabilities.",
+    title: "Compliance & Security",
+    description: "Expertise in Compliance, Business & Financial Analysis and Digital Transformation across various sectors like Banking, Insurance, Product Marketing, Cyber/Information Security, GRC, Privacy & Financial Audits and controls.",
   },
  
   {
