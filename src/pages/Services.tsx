@@ -110,16 +110,7 @@ const Services = () => {
                   </p>
                 </div>
               </div>
-         ))}
-                                    <div className="hidden md:flex items-center gap-4">
-        <Link to="/contact">
-          <Button variant="gradient" size="default" className="gap-2 rounded-full border-2">
-            Get in Touch
-          </Button>
-        </Link>
-    </div>
-
-   
+         ))}   
           </div>
         </div>
       </section>
