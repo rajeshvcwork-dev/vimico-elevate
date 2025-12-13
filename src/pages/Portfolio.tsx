@@ -131,20 +131,20 @@ const Portfolio = () => {
               <div className="relative bg-card rounded-3xl p-8 shadow-card border border-border/50">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2"></div>
-                    <div className="text-sm font-bold text-gray-900">New Markets</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">Security</div>
+                    <div className="text-sm font-bold text-gray-900">IMPLEMENT & AUDIT: ISO-27001, SOC-1 & 2 Configuration</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2">India</div>
-                    <div className="text-sm font-bold text-gray-900">Key Expansion</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">Privacy</div>
+                    <div className="text-sm font-bold text-gray-900">IMPLEMENT & GAP ASSESSMENT: ISO27701, GDPR/DPDPA/CCPA, DPIA, ROPA </div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2">Thailand</div>
-                    <div className="text-sm font-bold text-gray-900">Growth Region</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">Compliance</div>
+                    <div className="text-sm font-bold text-gray-900">FRAMEWORKS: RBI/SEBI/PCI-DSS/HIPAA/Taxation</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2">Africa</div>
-                    <div className="text-sm font-bold text-gray-900">Emerging Market</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">Governance</div>
+                    <div className="text-sm font-bold text-gray-900">DEVELOP: Process Controls, Financial Controls, Internal Audits, Continuous Improvement</div>
                   </div>
                 </div>
               </div>
