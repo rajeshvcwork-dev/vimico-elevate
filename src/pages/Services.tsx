@@ -39,14 +39,8 @@ const services = [
     title: "Support Infrastructure Setup",
     description: "Establish robust support systems using Jira with custom workflows and SLA management. We design ticketing systems that track, prioritize, and resolve issues while maintaining service level commitments.",
   },
-    <div className="hidden md:flex items-center gap-4">
-            <Link to="/contact">
-              <Button variant="gradient" size="default" className="gap-2 rounded-full border-2">
-                Get in Touch
-              </Button>
-            </Link>
-    </div>
   ];
+
 
 const Services = () => {
   return (
@@ -114,6 +108,15 @@ const Services = () => {
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {service.description}
                   </p>
+
+                  <div className="hidden md:flex items-center gap-4">
+        <Link to="/contact">
+          <Button variant="gradient" size="default" className="gap-2 rounded-full border-2">
+            Get in Touch
+          </Button>
+        </Link>
+    </div>
+
                 </div>
               </div>
             ))}
