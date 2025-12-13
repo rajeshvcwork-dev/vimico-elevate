@@ -39,7 +39,6 @@ const services = [
     title: "Support Infrastructure Setup",
     description: "Establish robust support systems using Jira with custom workflows and SLA management. We design ticketing systems that track, prioritize, and resolve issues while maintaining service level commitments.",
   },
-];
     <div className="hidden md:flex items-center gap-4">
             <Link to="/contact">
               <Button variant="gradient" size="default" className="gap-2 rounded-full border-2">
@@ -47,6 +46,8 @@ const services = [
               </Button>
             </Link>
     </div>
+  ];
+
 const Services = () => {
   return (
     <div className="min-h-screen bg-background">
