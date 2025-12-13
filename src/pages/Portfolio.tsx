@@ -90,6 +90,69 @@ const Portfolio = () => {
         </div>
       </section>
 
+      {/* RISP Partnership */}
+      <section className="py-16 lg:py-24 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-up">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                  <Globe className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <span className="text-sm font-medium text-primary">Global Partner</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                RISP Consulting
+              </h2>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Vimico has forged a strategic partnership with <strong className="text-foreground">RISP Consulting</strong>, a pioneering technology solutions provider. RISP Consulting specializes in compliance requirements and implementing secure controls and practices.
+                </p>
+                <p>
+                  Through this collaboration, Vimico is positioned to bring RISP Consulting's comprehensive product offerings to new market segments, including Thailand, and Malaysia region. RISP Consulting's portfolio encompasses advanced enterprise solutions, security consulting, compliance and governance audit consulting services that address the evolving needs of modern businesses.
+                </p>
+                <p>
+                  This partnership enables both companies to leverage their combined expertise, extending reach to untapped markets while delivering world-class technology solutions that drive digital innovation and business growth across emerging economies.
+                </p>
+              </div>
+              <a 
+                href="https://www.risp-consult.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block mt-6"
+              >
+                <Button variant="gradient" className="gap-2 rounded-full border-2">
+                  Visit RISP Consulting <ExternalLink className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
+            <div className="relative animate-fade-up delay-200">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl blur-3xl" />
+              <div className="relative bg-card rounded-3xl p-8 shadow-card border border-border/50">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-6 bg-muted/50 rounded-2xl">
+                    <div className="text-3xl font-bold gradient-text mb-2"></div>
+                    <div className="text-sm font-bold text-gray-900">New Markets</div>
+                  </div>
+                  <div className="text-center p-6 bg-muted/50 rounded-2xl">
+                    <div className="text-3xl font-bold gradient-text mb-2">India</div>
+                    <div className="text-sm font-bold text-gray-900">Key Expansion</div>
+                  </div>
+                  <div className="text-center p-6 bg-muted/50 rounded-2xl">
+                    <div className="text-3xl font-bold gradient-text mb-2">Thailand</div>
+                    <div className="text-sm font-bold text-gray-900">Growth Region</div>
+                  </div>
+                  <div className="text-center p-6 bg-muted/50 rounded-2xl">
+                    <div className="text-3xl font-bold gradient-text mb-2">Africa</div>
+                    <div className="text-sm font-bold text-gray-900">Emerging Market</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* MediSure Partnership */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8">
