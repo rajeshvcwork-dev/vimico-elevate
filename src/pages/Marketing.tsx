@@ -76,7 +76,9 @@ const Marketing = () => {
                 <p className="text-muted-foreground text-center">
                   The era of "Big Bang" launches is dead. Agile is here to simplify MVP releases.
                 </p>
+              </div>
 
+              <div>
                 <p className="text-muted-foreground text-center">
                   VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine.
                 </p>
@@ -84,7 +86,7 @@ const Marketing = () => {
 
               <div className="flex flex-wrap gap-4 justify-center">
                 <a 
-                  href="https://www.linkedin.com/company/vimico-org/posts/?feedView=all
+                  href="https://www.linkedin.com/company/vimico-org/posts/?feedView=all"
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
