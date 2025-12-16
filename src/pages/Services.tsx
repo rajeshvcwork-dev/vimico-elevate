@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import servicesHero from "@/assets/services-hero.jpg";
+import servicesHero from "@/assets/hero-services.jpg";
 
 const services = [
   {
@@ -59,7 +59,7 @@ const Services = () => {
         </div>
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl animate-fade-up">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Our Expertise
             </span>
@@ -67,7 +67,7 @@ const Services = () => {
               From Project Chaos to{" "}
               <span className="gradient-text">Predictable Success</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-3xl mx-auto">
               Empowering Tech Teams to Deliver Better, Faster, and Smarter, we deliver tailored solutions that drive business growth and digital excellence — the Vimico Way
             </p>
             <Link to="/contact">
