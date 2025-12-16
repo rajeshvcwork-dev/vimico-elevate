@@ -80,7 +80,7 @@ const Marketing = () => {
 
               <div className="flex flex-wrap gap-4 justify-center">
                 <a 
-                  href="https://www.linkedin.com/company/vimico" 
+                  href="https://www.linkedin.com/posts/vimico-org_agiletransformation-vimico-projectmanagement-activity-7406239548571127808-FhdT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACnLPgBvdg5TCxEkRZAd6JIoz4cETSCens" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
