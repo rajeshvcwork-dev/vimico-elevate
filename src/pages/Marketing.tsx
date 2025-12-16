@@ -74,13 +74,19 @@ const Marketing = () => {
               
               <div className="bg-muted/50 rounded-2xl p-6 mb-6">
                 <p className="text-muted-foreground text-center">
-                  LinkedIn posts and updates will be displayed here. Visit our LinkedIn page to see our latest content.
+                  The era of "Big Bang" launches is dead. Agile is here to simplify MVP releases.
+                </p>
+              </div>
+
+               <div className="bg-muted/50 rounded-2xl p-6 mb-6">
+                <p className="text-muted-foreground text-center">
+                  VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center">
                 <a 
-                  href="https://www.linkedin.com/posts/vimico-org_agiletransformation-vimico-projectmanagement-activity-7406239548571127808-FhdT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACnLPgBvdg5TCxEkRZAd6JIoz4cETSCens" 
+                  href="https://www.linkedin.com/company/vimico-org/posts/?feedView=all
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
