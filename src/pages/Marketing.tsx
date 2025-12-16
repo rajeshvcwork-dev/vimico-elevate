@@ -34,7 +34,7 @@ const Marketing = () => {
               Stay updated with our latest insights, industry trends, and company updates through our LinkedIn presence.
             </p>
             <a 
-              href="https://www.linkedin.com/company/vimico" 
+              href="https://www.linkedin.com/company/vimico-org" 
               target="_blank" 
               rel="noopener noreferrer"
             >
