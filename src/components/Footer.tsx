@@ -40,6 +40,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Our Partners</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Contact Us</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
@@ -50,7 +51,6 @@ const Footer = () => {
               © {new Date().getFullYear()} Vimico. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Privacy Policy</a>
               <a href="#" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Terms of Service</a>
             </div>
           </div>
