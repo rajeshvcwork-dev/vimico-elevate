@@ -40,11 +40,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Our Partners</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Contact Us</Link></li>
-              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
 
+          <div>
+            <h4 className="font-semibold text-primary-foreground mb-4">Privacy Policy</h4>
+            <ul className="space-y-2">
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Privacy Policy</Link></li>
+            </ul>
+          </div>
+        </div>
+      
         <div className="mt-12 pt-8 border-t border-border/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
