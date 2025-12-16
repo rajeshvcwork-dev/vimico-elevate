@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroProducts from "@/assets/hero-products.jpg";
 
 const products = [
   {
@@ -58,18 +59,32 @@ const Products = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto animate-fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+      <section className="relative pt-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={heroProducts} 
+            alt="Products" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
+        </div>
+        
+        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
+          <div className="max-w-3xl animate-fade-up">
+            <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Innovation Lab
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Products <span className="gradient-text">in Development</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted leading-relaxed mb-8">
               Discover the innovative solutions we're building to solve real-world problems and create meaningful experiences.
             </p>
+            <Link to="/contact">
+              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
+                Get Early Access
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

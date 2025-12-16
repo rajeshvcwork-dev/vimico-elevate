@@ -8,6 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import heroContact from "@/assets/hero-contact.jpg";
 
 const services = [
   "Agile Implementation",
@@ -109,17 +110,26 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-20">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto animate-fade-up">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+      <section className="relative pt-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={heroContact} 
+            alt="Contact" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
+        </div>
+        
+        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
+          <div className="max-w-3xl animate-fade-up">
+            <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Get in Touch
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Let's Build Something{" "}
               <span className="gradient-text">Amazing Together</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted leading-relaxed">
               Ready to transform your ideas into reality? We'd love to hear from you.
               Reach out and let's start the conversation.
             </p>
