@@ -1,31 +1,17 @@
-import { Target, Users, Award, Globe } from "lucide-react";
+import { Target, Users, Award, Globe, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroAbout from "@/assets/hero-about.jpg";
 
-const values = [
-  {
-    icon: Target,
-    title: "Mission-Driven",
-    description: "We're committed to delivering technology solutions that create real, measurable impact for our clients and partners.",
-  },
-  {
-    icon: Users,
-    title: "Client-Centric",
-    description: "Every solution is tailored to meet the unique needs and challenges of our clients, ensuring their success is our success.",
-  },
-  {
-    icon: Award,
-    title: "Excellence First",
-    description: "We maintain the highest standards of quality in everything we do, from consulting to implementation.",
-  },
-  {
-    icon: Globe,
-    title: "Global Perspective",
-    description: "With partnerships spanning India, Malaysia, Thailand, and Africa, we bring diverse insights to every project.",
-  },
+const coreServices = [
+  "Agile methodology implementation and enterprise Agile transformation",
+  "Jira and Salesforce consulting, implementation, and optimization",
+  "Operations and delivery process optimization",
+  "Customer support and service operations design",
+  "Professional website development and digital presence enablement",
+  "Compliance and security audits for process, platform, and data governance",
 ];
 
 const About = () => {
@@ -41,20 +27,20 @@ const About = () => {
             alt="About Vimico" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-vimico-navy/90 via-vimico-navy/80 to-vimico-navy/70" />
         </div>
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl animate-fade-up">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               About Us
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Empowering Businesses Through{" "}
-              <span className="gradient-text">Innovation</span>
+              Agile, Technology &{" "}
+              <span className="gradient-text">Delivery Transformation</span> Experts
             </h1>
-            <p className="text-lg md:text-xl text-muted leading-relaxed mb-8">
-              Vimico is a technology solutions partner dedicated to transforming ideas into digital reality, helping businesses thrive in the modern digital landscape.
+            <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-3xl mx-auto">
+              Vimico is a global business consulting and delivery transformation company specializing in Agile implementation, digital transformation, and operational excellence.
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
@@ -75,13 +61,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded with a vision to bridge the gap between technology and business success, Vimico has grown into a trusted partner for organizations seeking digital transformation.
+                  With over two decades of experience, we help organizations improve execution, scale operations, and achieve sustainable growth across SaaS, enterprise, and technology-driven environments.
                 </p>
                 <p>
-                  With over two decades of combined experience in enterprise solutions, agile methodologies, and digital innovation, our team brings deep expertise across mobile development, enterprise performance management, business intelligence, and web technologies.
+                  Operating across multiple geographies and three continents, Vimico has successfully built and scaled multimillion-dollar organizations by aligning Agile practices, delivery governance, technology platforms, and customer experience.
                 </p>
                 <p>
-                  We believe in building lasting partnerships, not just delivering projects. Our approach combines strategic thinking with technical excellence to create solutions that drive real business value.
+                  Our leadership brings deep expertise across Agile frameworks, Jira and Salesforce implementations, operations optimization, and enterprise systems.
                 </p>
               </div>
             </div>
@@ -98,12 +84,12 @@ const About = () => {
                     <div className="text-sm font-medium text-muted-foreground">Decades Experience</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2">98%</div>
-                    <div className="text-sm font-medium text-muted-foreground">Client Satisfaction</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">3</div>
+                    <div className="text-sm font-medium text-muted-foreground">Continents</div>
                   </div>
                   <div className="text-center p-6 bg-muted/50 rounded-2xl">
-                    <div className="text-3xl font-bold gradient-text mb-2">4</div>
-                    <div className="text-sm font-medium text-muted-foreground">Global Regions</div>
+                    <div className="text-3xl font-bold gradient-text mb-2">98%</div>
+                    <div className="text-sm font-medium text-muted-foreground">Client Satisfaction</div>
                   </div>
                 </div>
               </div>
@@ -112,36 +98,48 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Core Services Section */}
       <section className="py-20 lg:py-28 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our <span className="gradient-text">Values</span>
+              Our Core <span className="gradient-text">Services</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do at Vimico
+              Comprehensive solutions to transform your business operations
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {coreServices.map((service, index) => (
               <div
-                key={value.title}
-                className="group bg-card rounded-2xl p-6 shadow-card border border-border/50 card-hover animate-fade-up"
+                key={index}
+                className="flex items-start gap-4 p-6 bg-card rounded-2xl shadow-card border border-border/50 animate-fade-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-primary-foreground" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {value.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
+                <p className="text-foreground leading-relaxed">{service}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Work With */}
+      <section className="py-20 lg:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Who We <span className="gradient-text">Work With</span>
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              We work with small and mid-sized businesses as well as large enterprises, helping them overcome delivery bottlenecks, improve operational efficiency, strengthen compliance, and build scalable, future-ready organizations.
+            </p>
+            <p className="text-lg font-medium text-foreground">
+              Vimico is committed to enabling execution excellence, operational resilience, and long-term business success.
+            </p>
           </div>
         </div>
       </section>

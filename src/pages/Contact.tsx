@@ -121,7 +121,7 @@ const Contact = () => {
         </div>
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
-          <div className="max-w-3xl animate-fade-up">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Get in Touch
             </span>
@@ -129,7 +129,7 @@ const Contact = () => {
               Let's Build Something{" "}
               <span className="gradient-text">Amazing Together</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted leading-relaxed">
+            <p className="text-lg md:text-xl text-muted leading-relaxed max-w-3xl mx-auto">
               Ready to transform your ideas into reality? We'd love to hear from you.
               Reach out and let's start the conversation.
             </p>
