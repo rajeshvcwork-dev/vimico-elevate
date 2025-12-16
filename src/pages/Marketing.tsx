@@ -76,11 +76,9 @@ const Marketing = () => {
                 <p className="text-muted-foreground text-center">
                   The era of "Big Bang" launches is dead. Agile is here to simplify MVP releases.
                 </p>
-              </div>
 
-               <div className="bg-muted/50 rounded-2xl p-6 mb-6">
                 <p className="text-muted-foreground text-center">
-                  VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine
+                  VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine.
                 </p>
               </div>
 
