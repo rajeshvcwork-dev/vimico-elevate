@@ -68,7 +68,7 @@ const Marketing = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">Vimico on LinkedIn</h3>
-                  <p className="text-muted-foreground">Technology Solutions Partner</p>
+                  <p className="text-muted-foreground">Top Trending Posts</p>
                 </div>
               </div>
               
@@ -98,7 +98,7 @@ const Marketing = () => {
                 >
                   <Button variant="gradient" className="gap-2 rounded-full border-2">
                     <Linkedin className="w-4 h-4" />
-                    Visit Our LinkedIn Page
+                    Visit Our LinkedIn Posts
                     <ExternalLink className="w-4 h-4" />
                   </Button>
                 </a>
