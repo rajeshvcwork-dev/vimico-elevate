@@ -72,21 +72,21 @@ const Marketing = () => {
                 </div>
               </div>
               
-              <div className="bg-muted/50 rounded-2xl p-6 mb-6">
+              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
                 <p className="text-muted-foreground">
                   VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine.
                 </p>
               </div>
 
-              <div className="bg-muted/50 rounded-2xl p-6 mb-6">
+              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
                 <p className="text-muted-foreground">
                   The era of "Big Bang" launches is dead. Agile is here to simplify MVP releases.
                 </p>
               </div>
 
-              <div className="bg-muted/50 rounded-2xl p-6 mb-6">
+              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
                 <p className="text-muted-foreground">
-                  he biggest skill gap inside organizations has nothing to do with tools, processes, or technology?
+                  The biggest skill gap inside organizations has nothing to do with tools, processes, or technology?
                 </p>
               </div>
 
