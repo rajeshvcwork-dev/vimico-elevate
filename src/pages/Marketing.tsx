@@ -1,6 +1,7 @@
 import { Linkedin, ExternalLink, TrendingUp, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroMarketing from "@/assets/hero-marketing.jpg";
@@ -8,10 +9,17 @@ import heroMarketing from "@/assets/hero-marketing.jpg";
 const Marketing = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Marketing & Updates | Vimico - Follow Us on LinkedIn</title>
+        <meta name="description" content="Stay connected with Vimico on LinkedIn. Get the latest industry insights, company updates, Agile tips, and digital transformation news from our expert team." />
+        <meta name="keywords" content="Vimico LinkedIn, technology updates, Agile insights, digital transformation news, company updates, industry trends" />
+        <link rel="canonical" href="https://vimico.in/marketing" />
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroMarketing} 
