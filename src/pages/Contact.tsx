@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroContact from "@/assets/hero-contact.jpg";
@@ -107,10 +108,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Contact Us | Vimico - Get in Touch for Consulting & Partnerships</title>
+        <meta name="description" content="Contact Vimico for Agile consulting, Jira implementation, Salesforce setup, or partnership inquiries. We respond within 24-48 hours. Email: care@vimico.in" />
+        <meta name="keywords" content="contact Vimico, business consulting inquiry, technology partnership, Jira consultation, Salesforce inquiry, digital transformation contact" />
+        <link rel="canonical" href="https://vimico.in/contact" />
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroContact} 

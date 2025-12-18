@@ -1,6 +1,7 @@
 import { Store, Globe, Shield, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroResellers from "@/assets/hero-resellers.jpg";
@@ -37,10 +38,17 @@ const resellerProducts = [
 const Resellers = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Reseller Products | Vimico - Domain Services & FlexiSpy</title>
+        <meta name="description" content="Vimico is an authorized reseller for domain registration services and FlexiSpy monitoring solutions. Get competitive pricing on domains and premium security tools." />
+        <meta name="keywords" content="domain reseller, FlexiSpy reseller, domain registration India, monitoring software, DNS management, domain privacy" />
+        <link rel="canonical" href="https://vimico.in/resellers" />
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroResellers} 

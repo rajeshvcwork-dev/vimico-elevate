@@ -11,6 +11,8 @@ import Products from "./pages/Products";
 import Resellers from "./pages/Resellers";
 import Marketing from "./pages/Marketing";
 import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Refund from "./pages/Refund";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/resellers" element={<Resellers />} />
           <Route path="/marketing" element={<Marketing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/refund" element={<Refund />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

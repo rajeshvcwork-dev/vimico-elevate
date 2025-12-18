@@ -1,6 +1,7 @@
 import { Target, Users, Award, Globe, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroAbout from "@/assets/hero-about.jpg";
@@ -17,10 +18,17 @@ const coreServices = [
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About Us | Vimico - Agile & Digital Transformation Experts</title>
+        <meta name="description" content="Vimico is a global business consulting company with 20+ years experience in Agile implementation, digital transformation, Jira, Salesforce, and operational excellence across 3 continents." />
+        <meta name="keywords" content="about Vimico, business consulting, agile experts, digital transformation company, Jira consultants, Salesforce implementation, operational excellence" />
+        <link rel="canonical" href="https://vimico.in/about" />
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroAbout} 

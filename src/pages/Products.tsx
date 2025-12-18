@@ -1,6 +1,7 @@
 import { Sparkles, Palette, Leaf, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroProducts from "@/assets/hero-products.jpg";
@@ -56,10 +57,17 @@ const products = [
 const Products = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Products | Vimico - Innovative Solutions in Development</title>
+        <meta name="description" content="Discover Vimico's innovative products: EnsurePeace for insurance claims automation, FlairHub.guru for young artists, and Fewdrops.Succulents marketplace for plant enthusiasts." />
+        <meta name="keywords" content="Vimico products, EnsurePeace, FlairHub.guru, Fewdrops.Succulents, insurance automation, art platform, succulent marketplace" />
+        <link rel="canonical" href="https://vimico.in/products" />
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-20 overflow-hidden">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroProducts} 
