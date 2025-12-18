@@ -6,6 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 
+const highlights = [
+  "Agile Transformation",
+  "Enterprise Consulting",
+  "Digital Solutions",
+  "Strategic Partnerships",
+  "Technology Excellence",
+];
+
 const stats = [
   { value: "17+", label: "Projects Completed" },
   { value: "98%", label: "Client Satisfaction" },
