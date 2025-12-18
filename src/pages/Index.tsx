@@ -17,7 +17,7 @@ const highlights = [
 const stats = [
   { value: "99%", label: "Client Satisfaction" },
   { value: "Excellent", label: "Team of Experts" },
-  { value: "Over 2 Decades", label: "Of Experience" },
+  { value: "2.5", label: "Decades Of Experience" },
 ];
 
 const Index = () => {
