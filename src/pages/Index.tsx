@@ -7,11 +7,10 @@ import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 
 const highlights = [
-  "Agile Transformation",
-  "Enterprise Consulting",
-  "Digital Solutions",
   "Strategic Partnerships",
   "Technology Excellence",
+  "Enterprise Consulting",
+  "Digital Solutions",
 ];
 
 const stats = [
