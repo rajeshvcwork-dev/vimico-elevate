@@ -18,6 +18,7 @@ const stats = [
   { value: "99%", label: "Client Satisfaction" },
   { value: "Excellent", label: "Team of Experts" },
   { value: "2.5", label: "Decades Of Experience" },
+  { value: "4", label: "Partnership Agreements" },
 ];
 
 const Index = () => {
