@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -177,15 +177,20 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-border/50 shadow-sm">
+                <a 
+                  href="https://wa.me/918297753746" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-border/50 shadow-sm hover:border-primary/30 transition-colors"
+                >
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-accent flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary-foreground" />
+                    <MessageCircle className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
-                    <p className="text-muted-foreground">Available on request</p>
+                    <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
+                    <p className="text-primary hover:underline">Chat with us</p>
                   </div>
-                </div>
+                </a>
 
                 <div className="flex items-start gap-4 p-4 rounded-2xl bg-card border border-border/50 shadow-sm">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-primary flex items-center justify-center flex-shrink-0">
