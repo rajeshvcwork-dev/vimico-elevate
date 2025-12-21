@@ -126,30 +126,34 @@ const Index = () => {
               {
                 title: "Expert Team",
                 description: "Seasoned professionals with deep expertise across mobile, enterprise, and web technologies.",
+                link: "/expert-team",
               },
               {
                 title: "Global Partnerships",
                 description: "Strategic alliances that extend our reach and capabilities across emerging markets.",
+                link: "/global-partnership",
               },
               {
                 title: "Innovation First",
                 description: "Building cutting-edge products that solve real problems and create lasting impact.",
+                link: "/innovation",
               },
             ].map((feature, index) => (
-              <article
-                key={feature.title}
-                className="group bg-card rounded-2xl p-8 shadow-card border border-border/50 card-hover"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
-                  <span className="text-xl font-bold text-primary-foreground">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </article>
+              <Link to={feature.link} key={feature.title}>
+                <article
+                  className="group bg-card rounded-2xl p-8 shadow-card border border-border/50 card-hover h-full"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
+                    <span className="text-xl font-bold text-primary-foreground">{index + 1}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </article>
+              </Link>
             ))}
           </div>
         </div>

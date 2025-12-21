@@ -22,23 +22,23 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-vimico-navy/95 backdrop-blur-xl border-b border-primary/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={vimicoLogo} alt="Vimico" className="h-16 w-auto border-2" />
+            <img src={vimicoLogo} alt="Vimico" className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`nav-link text-sm ${
+                className={`nav-link text-base font-medium ${
                   isActive(link.path)
                     ? "text-primary font-semibold"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-primary-foreground/80 hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -56,7 +56,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-primary-foreground"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,17 +65,17 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 animate-fade-up">
+          <div className="md:hidden py-4 border-t border-primary/20 animate-fade-up bg-vimico-navy">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className={`px-4 py-2 rounded-lg transition-colors ${
+                  className={`px-4 py-2 rounded-lg transition-colors text-base ${
                     isActive(link.path)
-                      ? "bg-primary/10 text-primary font-semibold"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      ? "bg-primary/20 text-primary font-semibold"
+                      : "text-primary-foreground/80 hover:text-primary hover:bg-primary/10"
                   }`}
                 >
                   {link.name}

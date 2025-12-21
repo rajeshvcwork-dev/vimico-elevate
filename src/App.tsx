@@ -13,6 +13,9 @@ import Marketing from "./pages/Marketing";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
+import ExpertTeam from "./pages/ExpertTeam";
+import GlobalPartnership from "./pages/GlobalPartnership";
+import Innovation from "./pages/Innovation";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +37,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
+          <Route path="/expert-team" element={<ExpertTeam />} />
+          <Route path="/global-partnership" element={<GlobalPartnership />} />
+          <Route path="/innovation" element={<Innovation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
