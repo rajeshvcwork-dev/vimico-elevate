@@ -16,7 +16,7 @@ const resellerProducts = [
       "Domain privacy protection",
       "DNS management included",
     ],
-    link: "", // Placeholder for reseller link
+    link: "https://vimico-domain-seller.supersite2.myorderbox.com/", // Placeholder for reseller link
     icon: Globe,
     gradient: "from-primary to-secondary",
   },
