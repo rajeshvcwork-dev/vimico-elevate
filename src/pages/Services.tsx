@@ -10,37 +10,49 @@ const services = [
   {
     title: "Agile Methodology Implementation",
     description: "Accelerate your project delivery with proven Agile practices. We guide small to mid-level companies through Agile transformation, implementing Scrum or Kanban frameworks tailored to your team's needs.",
+    link: "/services/agile",
   },
   {
     title: "Power BI Projects",
     description: "Turn your data into actionable insights with Microsoft Power BI. Our experts design custom dashboards and reports that visualize complex data, enabling data-driven decision-making across your organization.",
+    link: "/services/powerbi",
   },
   {
     title: "Data Sanity",
     description: "A specialized service that detects anomalies, fixes inconsistencies, and keeps your data continuously business-ready.",
+    link: "/services/data-sanity",
   },
   {
     title: "Compliance & Security",
     description: "Expertise in Compliance, Business & Financial Analysis and Digital Transformation across various sectors like Banking, Insurance, Product Marketing, Cyber/Information Security, GRC, Privacy & Financial Audits and controls.",
+    link: "/services/compliance",
   },
- 
+  {
+    title: "ERP Implementation",
+    description: "Vimico has expertise in implementing ERP solutions for retail and enterprises. Whether you're looking for inventory management, supply chain optimization, or complete business process automation, we can help.",
+    link: "/services/erp",
+  },
   {
     title: "Website Development",
     description: "Create stunning, high-performance websites that captivate your audience. From corporate portals to e-commerce platforms, we build responsive, SEO-optimized websites that represent your brand excellence.",
+    link: "/services/website",
   },
   {
     title: "Portfolio Sites for Individuals",
     description: "Showcase your professional journey with a personalized portfolio website. We craft visually striking, memorable sites that highlight your skills, projects, and achievements to potential clients and employers.",
+    link: "/services/portfolio-sites",
   },
   {
     title: "Jira & Salesforce Setup",
     description: "Optimize your workflow with expertly configured Jira and Salesforce solutions. We handle end-to-end setup, customization, and integration to ensure your teams work efficiently from day one.",
+    link: "/services/jira-salesforce",
   },
   {
     title: "Support Infrastructure Setup",
     description: "Establish robust support systems using Jira with custom workflows and SLA management. We design ticketing systems that track, prioritize, and resolve issues while maintaining service level commitments.",
+    link: "/services/support-setup",
   },
-  ];
+];
 
 
 const Services = () => {
@@ -48,8 +60,8 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Services | Vimico - Agile Consulting, Jira & Salesforce Implementation</title>
-        <meta name="description" content="Transform your business with Vimico's expert services: Agile methodology implementation, Power BI solutions, Jira & Salesforce setup, website development, and compliance consulting." />
-        <meta name="keywords" content="agile consulting, Jira implementation, Salesforce setup, Power BI, website development, compliance audit, digital transformation services, enterprise consulting" />
+        <meta name="description" content="Transform your business with Vimico's expert services: Agile methodology implementation, Power BI solutions, Jira & Salesforce setup, website development, ERP implementation, and compliance consulting." />
+        <meta name="keywords" content="agile consulting, Jira implementation, Salesforce setup, Power BI, website development, compliance audit, digital transformation services, enterprise consulting, ERP implementation" />
         <link rel="canonical" href="https://vimico.in/services" />
       </Helmet>
       
@@ -101,9 +113,10 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              <div
+              <Link
+                to={service.link}
                 key={service.title}
-                className="service-check group animate-fade-up"
+                className="service-check group animate-fade-up cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
@@ -117,8 +130,8 @@ const Services = () => {
                     {service.description}
                   </p>
                 </div>
-              </div>
-         ))}   
+              </Link>
+            ))}   
           </div>
         </div>
       </section>
@@ -139,9 +152,9 @@ const Services = () => {
                   Get Started Today
                 </Button>
               </Link>
-              <Link to="/portfolio">
+              <Link to="/partnership">
                 <Button variant="hero" size="xl" className="gap-2 rounded-full border-2">
-                  View Our Work
+                  View Our Partnerships
                 </Button>
               </Link>
             </div>

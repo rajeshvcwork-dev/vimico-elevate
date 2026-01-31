@@ -14,11 +14,13 @@ import heroContact from "@/assets/hero-contact.jpg";
 const services = [
   "Agile Implementation",
   "Jira & Salesforce Setup",
-  "EPM Solutions",
+  "ERP Implementation",
   "Power BI Projects",
   "Website Development",
   "Portfolio Sites",
   "Support Setup",
+  "Compliance & Security",
+  "Data Sanity",
   "Partnership Inquiry",
   "Other",
 ];

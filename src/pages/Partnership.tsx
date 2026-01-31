@@ -6,14 +6,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import portfolioHero from "@/assets/hero-portfolio.jpg";
 
-const Portfolio = () => {
+const Partnership = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Portfolio & Partners | Vimico - Global Strategic Alliances</title>
+        <title>Partnership | Vimico - Global Strategic Alliances</title>
         <meta name="description" content="Explore Vimico's strategic partnerships with iZND Group, RISP Consulting, and MediSure Healthcare. Building global alliances for digital transformation across Asia and Africa." />
         <meta name="keywords" content="Vimico partners, strategic alliances, iZND Group, RISP Consulting, MediSure Healthcare, global partnerships, technology partners" />
-        <link rel="canonical" href="https://vimico.in/portfolio" />
+        <link rel="canonical" href="https://vimico.in/partnership" />
       </Helmet>
       
       <Navbar />
@@ -273,4 +273,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Partnership;

@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -6,12 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-home.jpg";
 
-const highlights = [
-  "Strategic Partnerships",
-  "Technology Excellence",
-  "Enterprise Consulting",
-  "Digital Solutions",
-];
 
 const stats = [
   { value: "99%", label: "Client Satisfaction" },
@@ -74,17 +68,6 @@ const Index = () => {
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-2 animate-fade-up delay-400">
-              {highlights.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/20 border border-border/30 backdrop-blur-sm"
-                >
-                  <Check className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary-foreground">{item}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
