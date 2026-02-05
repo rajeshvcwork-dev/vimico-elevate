@@ -42,10 +42,6 @@ const PortfolioService = () => {
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <Link to="/services" className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary mb-6 transition-colors">
-              <ArrowLeft className="w-4 h-4" />
-              Back to Services
-            </Link>
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6 ml-4">
               Personal Branding
             </span>
@@ -65,6 +61,18 @@ const PortfolioService = () => {
         </div>
       </section>
 
+       {/* Back to Services Button */}
+       <div className="container mx-auto px-4 lg:px-8 py-6">
+         <div className="flex justify-end">
+           <Link to="/services">
+             <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
+               <ArrowLeft className="w-4 h-4" />
+               Back to Services
+             </Button>
+           </Link>
+         </div>
+       </div>
+ 
       {/* Why Vimico Section */}
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
