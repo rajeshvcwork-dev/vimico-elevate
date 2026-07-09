@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, Globe, Smartphone, Zap, Search } from "lucide-react";
+import { ArrowLeft, Check, Globe, Smartphone, Zap, Search, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import website1 from "@/assets/services/website-1.jpg";
 import website2 from "@/assets/services/website-2.jpg";
 import website3 from "@/assets/services/website-3.jpg";
+import gripnovacoLogo from "@/assets/gripnovaco-logo.png";
 
 const benefits = [
   "Stunning, modern designs that captivate visitors",
