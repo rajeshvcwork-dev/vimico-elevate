@@ -124,7 +124,8 @@ const Resellers = () => {
                     </a>
                   ) : (
                     <Button variant="gradient" disabled className="opacity-70 gap-2 rounded-full border-2">
-                      Coming Soon
+                      Purchase Now
+                      <ExternalLink className="w-4 h-4" />
                     </Button>
                   )}
                   <Link to="/contact">
