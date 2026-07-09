@@ -19,6 +19,7 @@ const items: ScrollItem[] = [
   { name: "iDempiere Solutions", category: "Delivered", to: "/services/erp", icon: Building2 },
   { name: "Power BI Dashboards", category: "Delivered", to: "/services/powerbi", icon: Building2 },
   { name: "Agile Transformations", category: "Delivered", to: "/services/agile", icon: Building2 },
+  { name: "GripNovaco Website", category: "Delivered", to: "/services/website", icon: Building2 },
 ];
 
 const LogoCard = ({ item }: { item: ScrollItem }) => {
