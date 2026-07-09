@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LogoScroller from "@/components/LogoScroller";
 import heroImage from "@/assets/hero-home.jpg";
 
 
@@ -91,6 +92,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Client & Partner Logo Scroller */}
+      <LogoScroller />
 
       {/* Features Section */}
       <section className="py-20 lg:py-28 bg-muted/30">

@@ -227,4 +227,17 @@
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
+
+  @keyframes marquee-rtl {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee-rtl 40s linear infinite;
+  }
+
+  .marquee-container:hover .animate-marquee {
+    animation-play-state: paused;
+  }
 }
