@@ -1,4 +1,4 @@
-import { ArrowLeft, Check, Globe, Smartphone, Zap, Search } from "lucide-react";
+import { ArrowLeft, Check, Globe, Smartphone, Zap, Search, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import website1 from "@/assets/services/website-1.jpg";
 import website2 from "@/assets/services/website-2.jpg";
 import website3 from "@/assets/services/website-3.jpg";
+import gripnovacoLogo from "@/assets/gripnovaco-logo.png";
 
 const benefits = [
   "Stunning, modern designs that captivate visitors",
@@ -142,6 +143,69 @@ const WebsiteService = () => {
                     <span className="text-foreground">{benefit}</span>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GripNovaco Success Story / Testimonial */}
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-secondary/5 to-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto animate-fade-up">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-4">
+                Success Story
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Delivered with <span className="gradient-text">Utmost Satisfaction</span>
+              </h2>
+            </div>
+
+            <div className="relative bg-card rounded-3xl p-8 md:p-12 shadow-card border border-border/50 card-hover overflow-hidden">
+              <Quote className="absolute top-6 left-6 w-12 h-12 text-primary/20" />
+
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <a
+                  href="https://gripnovaco.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit GripNovaco website"
+                  className="mb-6 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
+                >
+                  <img
+                    src={gripnovacoLogo}
+                    alt="GripNovaco logo"
+                    width={280}
+                    height={140}
+                    loading="lazy"
+                    className="h-16 md:h-20 w-auto object-contain"
+                  />
+                </a>
+
+                <blockquote className="text-lg md:text-xl text-foreground leading-relaxed mb-6 max-w-2xl">
+                  "Vimico delivered our website with exceptional professionalism. The team understood our vision, executed flawlessly, and launched a modern, responsive site that truly represents our brand. We are delighted with the results and the seamless experience."
+                </blockquote>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-foreground font-semibold">
+                    GN
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-foreground">GripNovaco Team</div>
+                    <div className="text-sm text-muted-foreground">Happy Client</div>
+                  </div>
+                </div>
+
+                <a
+                  href="https://gripnovaco.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-8 text-primary font-medium hover:underline"
+                >
+                  Visit GripNovaco.com
+                  <Globe className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
