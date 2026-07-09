@@ -29,7 +29,7 @@ const resellerProducts = [
       "Social media monitoring",
       "Remote camera and microphone access",
     ],
-    link: "", // Placeholder for reseller link
+    link: "https://www.flexispy.com?a_aid=e464f5c3", // Placeholder for reseller link
     icon: Shield,
     gradient: "from-secondary to-accent",
   },
