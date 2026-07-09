@@ -28,7 +28,7 @@ const resellerProducts = [
       "GPS location tracking",
       "Social media monitoring",
       "Remote camera and microphone access",
-      "And Many more features...",
+      <b>"And Many more features..."</b>,
     ],
     link: "https://www.flexispy.com?a_aid=e464f5c3", // Placeholder for reseller link
     icon: Shield,
