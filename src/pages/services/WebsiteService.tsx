@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import website1 from "@/assets/services/website-1.jpg";
 import website2 from "@/assets/services/website-2.jpg";
 import website3 from "@/assets/services/website-3.jpg";
-import gripnovacoLogoAsset from "@/assets/gripnovacologo.png.asset.json";
+import gripnovacoLogoAsset from "@/assets/gripnovaco-logo.png.asset.json";
 
 const benefits = [
   "Stunning, modern designs that captivate visitors",
