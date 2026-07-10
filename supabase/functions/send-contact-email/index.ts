@@ -18,6 +18,38 @@ interface ContactFormRequest {
   message: string;
 }
 
+// Escape HTML entities to prevent injection into email HTML
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return String(text).replace(/[&<>"']/g, (m) => map[m]);
+}
+
+// Simple in-memory IP-based rate limiting
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+
+function checkRateLimit(identifier: string, maxRequests = 5, windowMs = 3600000): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(identifier);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(identifier, { count: 1, resetTime: now + windowMs });
+    return true;
+  }
+
+  if (record.count >= maxRequests) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -25,6 +57,22 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    // Rate limit by client IP to prevent spam/abuse
+    const clientIP =
+      req.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
+    if (!checkRateLimit(clientIP)) {
+      console.warn("Rate limit exceeded for IP:", clientIP);
+      return new Response(
+        JSON.stringify({ error: "Rate limit exceeded. Please try again later." }),
+        {
+          status: 429,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
     const { name, email, company, phone, service, message }: ContactFormRequest = await req.json();
 
     console.log("Received contact form submission:", { name, email, company, service });
@@ -54,6 +102,14 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
+    // Escape all user-provided values before embedding into HTML
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeCompany = company ? escapeHtml(company) : "";
+    const safePhone = phone ? escapeHtml(phone) : "";
+    const safeService = service ? escapeHtml(service) : "";
+    const safeMessage = escapeHtml(message);
+
     // Send notification email to Vimico
     const notificationEmail = await resend.emails.send({
       from: "Vimico Website <onboarding@resend.dev>",
@@ -65,16 +121,16 @@ const handler = async (req: Request): Promise<Response> => {
           <hr style="border: 1px solid #e5e7eb;" />
           
           <div style="margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
-            ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-            ${service ? `<p><strong>Service Interest:</strong> ${service}</p>` : ""}
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            ${safeCompany ? `<p><strong>Company:</strong> ${safeCompany}</p>` : ""}
+            ${safePhone ? `<p><strong>Phone:</strong> ${safePhone}</p>` : ""}
+            ${safeService ? `<p><strong>Service Interest:</strong> ${safeService}</p>` : ""}
           </div>
           
           <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px;">
             <h3 style="color: #374151; margin-top: 0;">Message:</h3>
-            <p style="color: #4b5563; white-space: pre-wrap;">${message}</p>
+            <p style="color: #4b5563; white-space: pre-wrap;">${safeMessage}</p>
           </div>
           
           <hr style="border: 1px solid #e5e7eb; margin-top: 30px;" />
@@ -94,7 +150,7 @@ const handler = async (req: Request): Promise<Response> => {
       subject: "Thank you for contacting Vimico!",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1e3a5f;">Thank You, ${name}!</h2>
+          <h2 style="color: #1e3a5f;">Thank You, ${safeName}!</h2>
           
           <p style="color: #4b5563; line-height: 1.6;">
             We have received your message and appreciate you reaching out to us. 
@@ -103,7 +159,7 @@ const handler = async (req: Request): Promise<Response> => {
           
           <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #374151; margin-top: 0;">Your Message:</h3>
-            <p style="color: #4b5563; white-space: pre-wrap;">${message}</p>
+            <p style="color: #4b5563; white-space: pre-wrap;">${safeMessage}</p>
           </div>
           
           <p style="color: #4b5563; line-height: 1.6;">
