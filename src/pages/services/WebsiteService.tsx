@@ -176,10 +176,10 @@ const WebsiteService = () => {
                   <img
                     src={gripnovacoLogoAsset.url}
                     alt="GripNovaco logo"
-                    width={280}
-                    height={140}
+                    width={420}
+                    height={210}
                     loading="lazy"
-                    className="h-16 md:h-20 w-auto object-contain"
+                    className="h-28 md:h-36 w-auto object-contain"
                   />
                 </a>
 
