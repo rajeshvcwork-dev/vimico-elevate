@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import website1 from "@/assets/services/website-1.jpg";
 import website2 from "@/assets/services/website-2.jpg";
 import website3 from "@/assets/services/website-3.jpg";
-import gripnovacoLogoAsset from "@/assets/gripnovaco-logo.png.asset.json";
+import gripnovacoLogo from "@/assets/gripnovaco-logo.png";
 
 const benefits = [
   "Stunning, modern designs that captivate visitors",
@@ -174,7 +174,7 @@ const WebsiteService = () => {
                   className="mb-6 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary rounded-xl"
                 >
                   <img
-                    src={gripnovacoLogoAsset.url}
+                    src={gripnovacoLogo}
                     alt="GripNovaco logo"
                     width={420}
                     height={210}
