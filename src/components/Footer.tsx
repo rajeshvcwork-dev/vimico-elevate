@@ -16,13 +16,13 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary-foreground mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Agile Consulting</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">PowerBI Solutions</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Security & Compliance</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Jira & Salesforce</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Building</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Training & Mentoring</Link></li>
-              
+              <li><a href="https://domainiq-insight.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">DomainIQ-Insight</a></li>
+              <li><Link to="/services/website" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Development</Link></li>
+              <li><Link to="/services/jira-salesforce" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Jira</Link></li>
+              <li><Link to="/services/agile" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Agile Consulting</Link></li>
+              <li><Link to="/services/powerbi" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">PowerBI Solutions</Link></li>
+              <li><Link to="/services/compliance" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Security & Compliance</Link></li>
+              <li><Link to="/services/jira-salesforce" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Salesforce</Link></li>
             </ul>
           </div>
 

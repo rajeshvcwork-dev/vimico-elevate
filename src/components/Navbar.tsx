@@ -29,8 +29,8 @@ const Navbar = () => {
   ];
 
   const resellersSubmenu = [
-    { name: "Domain Services", path: "/resellers#domain-services" },
     { name: "FlexiSpy", path: "/resellers#flexispy" },
+    { name: "Domain Services", path: "/resellers#domain-services" },
   ];
 
   const navLinks: Array<{
@@ -42,8 +42,8 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services", submenu: servicesSubmenu },
     { name: "Products", path: "/products", submenu: productsSubmenu },
-    { name: "Partnership", path: "/partnership" },
     { name: "Resellers", path: "/resellers", submenu: resellersSubmenu },
+    { name: "Partnership", path: "/partnership" },
     { name: "Marketing", path: "/marketing" },
     { name: "Contact", path: "/contact" },
   ];
