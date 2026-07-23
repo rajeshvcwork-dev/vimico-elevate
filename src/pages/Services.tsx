@@ -8,6 +8,12 @@ import servicesHero from "@/assets/hero-services.jpg";
 
 const services = [
   {
+    title: "DomainIQ-Insight",
+    description: "AI-powered domain due diligence. Enter a domain and get a full intelligence report — registration, history, SEO, security, brand, tech stack, and valuation — synthesized by AI.",
+    link: "https://domainiq-insight.lovable.app/",
+    external: true,
+  },
+  {
     title: "Agile Methodology Implementation",
     description: "Accelerate your project delivery with proven Agile practices. We guide small to mid-level companies through Agile transformation, implementing Scrum or Kanban frameworks tailored to your team's needs.",
     link: "/services/agile",
@@ -113,6 +119,28 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
+              service.external ? (
+                <a
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={service.title}
+                  className="service-check group animate-fade-up cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                    <Check className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+                </a>
+              ) : (
               <Link
                 to={service.link}
                 key={service.title}
@@ -131,6 +159,7 @@ const Services = () => {
                   </p>
                 </div>
               </Link>
+              )
             ))}   
           </div>
         </div>
