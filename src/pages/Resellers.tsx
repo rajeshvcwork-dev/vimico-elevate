@@ -19,6 +19,7 @@ const resellerProducts = [
     link: "https://vimico-domain-seller.supersite2.myorderbox.com/", // Placeholder for reseller link
     icon: Globe,
     gradient: "from-primary to-secondary",
+    id: "domain-services",
   },
   {
     name: "FlexiSpy",
@@ -33,6 +34,7 @@ const resellerProducts = [
     link: "https://www.flexispy.com?a_aid=e464f5c3", // Placeholder for reseller link
     icon: Shield,
     gradient: "from-secondary to-accent",
+    id: "flexispy",
   },
 ];
 
@@ -86,7 +88,8 @@ const Resellers = () => {
             {resellerProducts.map((product, index) => (
               <div
                 key={product.name}
-                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up"
+                id={product.id}
+                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up scroll-mt-24"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
