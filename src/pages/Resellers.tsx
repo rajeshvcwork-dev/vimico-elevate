@@ -86,7 +86,8 @@ const Resellers = () => {
             {resellerProducts.map((product, index) => (
               <div
                 key={product.name}
-                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up"
+                id={product.id}
+                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up scroll-mt-24"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
