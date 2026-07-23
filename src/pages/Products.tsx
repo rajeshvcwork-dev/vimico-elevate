@@ -21,6 +21,7 @@ const products = [
     status: "Under Development",
     icon: Sparkles,
     gradient: "from-primary to-secondary",
+    id: "ensurepeace",
   },
   {
     name: "FlairHub.guru",
@@ -36,6 +37,7 @@ const products = [
     status: "Coming Soon",
     icon: Palette,
     gradient: "from-secondary to-accent",
+    id: "flairhub",
   },
   {
     name: "Fewdrops.Succulents",
@@ -51,6 +53,7 @@ const products = [
     status: "Under Construction",
     icon: Leaf,
     gradient: "from-accent to-primary",
+    id: "fewdrops",
   },
 ];
 

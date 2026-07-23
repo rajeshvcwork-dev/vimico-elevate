@@ -19,6 +19,7 @@ const resellerProducts = [
     link: "https://vimico-domain-seller.supersite2.myorderbox.com/", // Placeholder for reseller link
     icon: Globe,
     gradient: "from-primary to-secondary",
+    id: "domain-services",
   },
   {
     name: "FlexiSpy",
@@ -33,6 +34,7 @@ const resellerProducts = [
     link: "https://www.flexispy.com?a_aid=e464f5c3", // Placeholder for reseller link
     icon: Shield,
     gradient: "from-secondary to-accent",
+    id: "flexispy",
   },
 ];
 
