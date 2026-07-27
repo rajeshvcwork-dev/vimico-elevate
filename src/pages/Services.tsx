@@ -6,59 +6,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import servicesHero from "@/assets/hero-services.jpg";
 
-const services = [
-  {
-    title: "DomainIQ-Insight",
-    description: "AI-powered domain due diligence. Enter a domain and get a full intelligence report — registration, history, SEO, security, brand, tech stack, and valuation — synthesized by AI.",
-    link: "https://domainiq-insight.lovable.app/",
-    external: true,
-  },
-  {
-    title: "Agile Methodology Implementation",
-    description: "Accelerate your project delivery with proven Agile practices. We guide small to mid-level companies through Agile transformation, implementing Scrum or Kanban frameworks tailored to your team's needs.",
-    link: "/services/agile",
-  },
-  {
-    title: "Power BI Projects",
-    description: "Turn your data into actionable insights with Microsoft Power BI. Our experts design custom dashboards and reports that visualize complex data, enabling data-driven decision-making across your organization.",
-    link: "/services/powerbi",
-  },
-  {
-    title: "Data Sanity",
-    description: "A specialized service that detects anomalies, fixes inconsistencies, and keeps your data continuously business-ready.",
-    link: "/services/data-sanity",
-  },
-  {
-    title: "Compliance & Security",
-    description: "Expertise in Compliance, Business & Financial Analysis and Digital Transformation across various sectors like Banking, Insurance, Product Marketing, Cyber/Information Security, GRC, Privacy & Financial Audits and controls.",
-    link: "/services/compliance",
-  },
-  {
-    title: "ERP Implementation",
-    description: "Vimico has expertise in implementing ERP solutions for retail and enterprises. Whether you're looking for inventory management, supply chain optimization, or complete business process automation, we can help.",
-    link: "/services/erp",
-  },
-  {
-    title: "Website Development",
-    description: "Create stunning, high-performance websites that captivate your audience. From corporate portals to e-commerce platforms, we build responsive, SEO-optimized websites that represent your brand excellence.",
-    link: "/services/website",
-  },
-  {
-    title: "Portfolio Sites for Individuals",
-    description: "Showcase your professional journey with a personalized portfolio website. We craft visually striking, memorable sites that highlight your skills, projects, and achievements to potential clients and employers.",
-    link: "/services/portfolio-sites",
-  },
-  {
-    title: "Jira & Salesforce Setup",
-    description: "Optimize your workflow with expertly configured Jira and Salesforce solutions. We handle end-to-end setup, customization, and integration to ensure your teams work efficiently from day one.",
-    link: "/services/jira-salesforce",
-  },
-  {
-    title: "Support Infrastructure Setup",
-    description: "Establish robust support systems using Jira with custom workflows and SLA management. We design ticketing systems that track, prioritize, and resolve issues while maintaining service level commitments.",
-    link: "/services/support-setup",
-  },
-];
+import { practiceAreas } from "@/data/practiceAreas";
+
+const services = practiceAreas.map((p) => ({
+  title: p.title,
+  description: p.tagline,
+  link: `/services/${p.slug}`,
+}));
 
 
 const Services = () => {
@@ -119,28 +73,6 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
-              service.external ? (
-                <a
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={service.title}
-                  className="service-check group animate-fade-up cursor-pointer"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                    <Check className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </a>
-              ) : (
               <Link
                 to={service.link}
                 key={service.title}
@@ -159,7 +91,6 @@ const Services = () => {
                   </p>
                 </div>
               </Link>
-              )
             ))}   
           </div>
         </div>

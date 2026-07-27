@@ -19,16 +19,9 @@ import GlobalPartnership from "./pages/GlobalPartnership";
 import Innovation from "./pages/Innovation";
 import NotFound from "./pages/NotFound";
 
-// Service Detail Pages
-import AgileService from "./pages/services/AgileService";
-import PowerBIService from "./pages/services/PowerBIService";
-import DataSanityService from "./pages/services/DataSanityService";
-import ComplianceService from "./pages/services/ComplianceService";
-import WebsiteService from "./pages/services/WebsiteService";
-import PortfolioService from "./pages/services/PortfolioService";
-import JiraService from "./pages/services/JiraService";
-import SupportService from "./pages/services/SupportService";
-import ERPService from "./pages/services/ERPService";
+// Practice Area Pages (dynamic renderer)
+import PracticeAreaPage from "./pages/services/PracticeAreaPage";
+import { Navigate } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -54,16 +47,17 @@ const App = () => (
           <Route path="/global-partnership" element={<GlobalPartnership />} />
           <Route path="/innovation" element={<Innovation />} />
           
-          {/* Service Detail Routes */}
-          <Route path="/services/agile" element={<AgileService />} />
-          <Route path="/services/powerbi" element={<PowerBIService />} />
-          <Route path="/services/data-sanity" element={<DataSanityService />} />
-          <Route path="/services/compliance" element={<ComplianceService />} />
-          <Route path="/services/website" element={<WebsiteService />} />
-          <Route path="/services/portfolio-sites" element={<PortfolioService />} />
-          <Route path="/services/jira-salesforce" element={<JiraService />} />
-          <Route path="/services/support-setup" element={<SupportService />} />
-          <Route path="/services/erp" element={<ERPService />} />
+          {/* Practice Area Routes (dynamic) */}
+          <Route path="/services/:slug" element={<PracticeAreaPage />} />
+
+          {/* Legacy redirects — map old slugs to new practice areas */}
+          <Route path="/services/agile" element={<Navigate to="/services/delivery-excellence" replace />} />
+          <Route path="/services/jira-salesforce" element={<Navigate to="/services/delivery-excellence" replace />} />
+          <Route path="/services/support-setup" element={<Navigate to="/services/delivery-excellence" replace />} />
+          <Route path="/services/portfolio-sites" element={<Navigate to="/services/website" replace />} />
+          <Route path="/services/data-sanity" element={<Navigate to="/services/powerbi" replace />} />
+          <Route path="/services/compliance" element={<Navigate to="/services/grc" replace />} />
+          <Route path="/services/erp" element={<Navigate to="/services/business-transformation" replace />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

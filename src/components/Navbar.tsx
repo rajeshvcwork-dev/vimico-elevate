@@ -10,16 +10,15 @@ const Navbar = () => {
   const location = useLocation();
 
   const servicesSubmenu = [
-    { name: "DomainIQ-Insight", path: "https://domainiq-insight.lovable.app/", external: true },
-    { name: "Agile Methodology", path: "/services/agile" },
-    { name: "Power BI Projects", path: "/services/powerbi" },
-    { name: "Data Sanity", path: "/services/data-sanity" },
-    { name: "Compliance & Security", path: "/services/compliance" },
-    { name: "ERP Implementation", path: "/services/erp" },
-    { name: "Website Development", path: "/services/website" },
-    { name: "Portfolio Sites", path: "/services/portfolio-sites" },
-    { name: "Jira & Salesforce", path: "/services/jira-salesforce" },
-    { name: "Support Infrastructure", path: "/services/support-setup" },
+    { name: "Business Transformation", path: "/services/business-transformation" },
+    { name: "Delivery Excellence", path: "/services/delivery-excellence" },
+    { name: "AI Strategy & Adoption", path: "/services/ai-strategy" },
+    { name: "FP&A / EPM Consulting", path: "/services/fpa-epm" },
+    { name: "Power BI & Business Analytics", path: "/services/powerbi" },
+    { name: "Governance, Risk & Compliance", path: "/services/grc" },
+    { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
+    { name: "DomainIQ Insight Platform", path: "/services/domainiq" },
+    { name: "Website Development & Digital", path: "/services/website" },
   ];
 
   const productsSubmenu = [
@@ -39,13 +38,13 @@ const Navbar = () => {
     submenu?: Array<{ name: string; path: string; external?: boolean }>;
   }> = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
     { name: "Services", path: "/services", submenu: servicesSubmenu },
     { name: "Products", path: "/products", submenu: productsSubmenu },
     { name: "Resellers", path: "/resellers", submenu: resellersSubmenu },
     { name: "Partnership", path: "/partnership" },
     { name: "Marketing", path: "/marketing" },
     { name: "Contact", path: "/contact" },
+    { name: "About Vimico", path: "/about" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
