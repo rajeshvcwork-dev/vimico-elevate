@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LogoScroller from "@/components/LogoScroller";
+import MenuScrollScene from "@/components/MenuScrollScene";
 import heroImage from "@/assets/hero-home.jpg";
 
 
@@ -95,6 +96,9 @@ const Index = () => {
 
       {/* Client & Partner Logo Scroller */}
       <LogoScroller />
+
+      {/* Scroll-driven 3D menu scene */}
+      <MenuScrollScene />
 
       {/* Features Section */}
       <section className="py-20 lg:py-28 bg-muted/30">

@@ -16,13 +16,15 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-primary-foreground mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="https://domainiq-insight.lovable.app/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">DomainIQ-Insight</a></li>
+              <li><Link to="/services/domainiq" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">DomainIQ Insight</Link></li>
+              <li><Link to="/services/business-transformation" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Business Transformation</Link></li>
+              <li><Link to="/services/delivery-excellence" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Delivery Excellence</Link></li>
+              <li><Link to="/services/ai-strategy" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">AI Strategy & Adoption</Link></li>
+              <li><Link to="/services/fpa-epm" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">FP&A / EPM</Link></li>
+              <li><Link to="/services/powerbi" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Power BI & Analytics</Link></li>
+              <li><Link to="/services/grc" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Governance, Risk & Compliance</Link></li>
+              <li><Link to="/services/executive-coaching" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Executive Coaching</Link></li>
               <li><Link to="/services/website" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Development</Link></li>
-              <li><Link to="/services/jira-salesforce" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Jira</Link></li>
-              <li><Link to="/services/agile" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Agile Consulting</Link></li>
-              <li><Link to="/services/powerbi" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">PowerBI Solutions</Link></li>
-              <li><Link to="/services/compliance" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Security & Compliance</Link></li>
-              <li><Link to="/services/jira-salesforce" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Salesforce</Link></li>
             </ul>
           </div>
 
