@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LogoScroller from "@/components/LogoScroller";
-import MenuScrollScene from "@/components/MenuScrollScene";
+import Hero3D from "@/components/Hero3D";
 import heroImage from "@/assets/hero-home.jpg";
 
 
@@ -42,6 +42,7 @@ const Index = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-vimico-navy/90 via-vimico-navy/80 to-vimico-navy/70" />
         </div>
+        <Hero3D variant="home" />
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center">
@@ -96,9 +97,6 @@ const Index = () => {
 
       {/* Client & Partner Logo Scroller */}
       <LogoScroller />
-
-      {/* Scroll-driven 3D menu scene */}
-      <MenuScrollScene />
 
       {/* Features Section */}
       <section className="py-20 lg:py-28 bg-muted/30">
