@@ -54,7 +54,7 @@ const Testimonials = () => {
       {/* Hero */}
       <section className="relative min-h-[600px] pt-20 overflow-hidden bg-gradient-to-br from-vimico-navy via-vimico-navy to-secondary/30">
         <Hero3D variant="testimonials" />
-        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Client Voices

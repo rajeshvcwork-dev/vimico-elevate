@@ -79,7 +79,7 @@ const PracticeAreaPage = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-vimico-navy/95 via-vimico-navy/85 to-vimico-navy/70" />
         </div>
         <Hero3D variant="practice" />
-        <div className="relative container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
           <Link to="/services">
             <Button
               variant="outline"
