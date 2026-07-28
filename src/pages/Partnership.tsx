@@ -1,18 +1,53 @@
-import { ExternalLink, Globe, Handshake, TrendingUp } from "lucide-react";
+import { ExternalLink, Globe, Handshake, TrendingUp, Shield, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import portfolioHero from "@/assets/hero-portfolio.jpg";
+
+const resellerProducts = [
+  {
+    name: "FlexiSpy",
+    description:
+      "FlexiSpy is a powerful monitoring solution for parents and employers. Track device activity, monitor communications, and ensure digital safety with this comprehensive tool.",
+    features: [
+      "Call and message monitoring",
+      "GPS location tracking",
+      "Social media monitoring",
+      "Remote camera and microphone access",
+      "And many more features...",
+    ],
+    link: "https://www.flexispy.com?a_aid=e464f5c3",
+    icon: Shield,
+    gradient: "from-secondary to-accent",
+    id: "flexispy",
+  },
+  {
+    name: "Domain Services",
+    description:
+      "Register and manage domain names through Vimico. We offer competitive pricing on popular domain extensions with full DNS management and domain privacy protection.",
+    features: [
+      "Wide range of domain extensions (.com, .in, .co, .io, etc.)",
+      "Easy domain management dashboard",
+      "Domain privacy protection",
+      "DNS management included",
+    ],
+    link: "https://vimico-domain-seller.supersite2.myorderbox.com/",
+    icon: Globe,
+    gradient: "from-primary to-secondary",
+    id: "domain-services",
+  },
+];
 
 const Partnership = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Partnership | Vimico - Global Strategic Alliances</title>
-        <meta name="description" content="Explore Vimico's strategic partnerships with iZND Group, RISP Consulting, and MediSure Healthcare. Building global alliances for digital transformation across Asia and Africa." />
-        <meta name="keywords" content="Vimico partners, strategic alliances, iZND Group, RISP Consulting, MediSure Healthcare, global partnerships, technology partners" />
+        <title>Partnerships & Resellers | Vimico Global Alliances</title>
+        <meta name="description" content="Vimico's strategic partnerships with iZND Group, RISP Consulting and MediSure Healthcare, plus our authorized reseller products — FlexiSpy and domain services." />
+        <meta name="keywords" content="Vimico partners, strategic alliances, iZND Group, RISP Consulting, MediSure Healthcare, FlexiSpy reseller, domain reseller" />
         <link rel="canonical" href="https://vimico.in/partnership" />
       </Helmet>
       
@@ -28,23 +63,31 @@ const Partnership = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
         </div>
+        <Hero3D variant="partnership" />
         
-        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
-              Strategic Partnerships
+              Partnerships & Resellers
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Building <span className="gradient-text">Global Alliances</span>
             </h1>
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-3xl mx-auto">
-              Vimico partners with industry leaders to deliver exceptional value and expand reach across emerging markets worldwide.
+              Vimico partners with industry leaders and resells trusted products — delivering exceptional value across emerging markets worldwide.
             </p>
-            <Link to="/contact">
-              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
-                Explore Partnership Opportunities
-              </Button>
-            </Link>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/contact">
+                <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
+                  Explore Partnership Opportunities
+                </Button>
+              </Link>
+              <a href="#reseller-products">
+                <Button variant="hero" size="xl" className="gap-2 rounded-full border-2">
+                  Reseller Products
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -245,6 +288,82 @@ const Partnership = () => {
                 </Button>
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reseller Products (merged from Resellers) */}
+      <section id="reseller-products" className="py-20 lg:py-28 bg-muted/30 scroll-mt-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-14 animate-fade-up max-w-3xl mx-auto">
+            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+              Authorized Reseller
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Products we <span className="gradient-text">resell & support</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Beyond partnerships, Vimico is an authorized reseller for premium products and services.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {resellerProducts.map((product, index) => (
+              <div
+                key={product.name}
+                id={product.id}
+                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up scroll-mt-24"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                  <div>
+                    <div className={`inline-flex w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} items-center justify-center mb-6`}>
+                      <product.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">{product.name}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                  </div>
+
+                  <div className="bg-muted/50 rounded-2xl p-6">
+                    <h4 className="font-semibold text-foreground mb-4">Features</h4>
+                    <ul className="space-y-3">
+                      {product.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-muted-foreground">
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${product.gradient} mt-2 flex-shrink-0`} />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-border/50 flex flex-wrap gap-4">
+                  <a href={product.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="gradient" className="gap-2 rounded-full border-2">
+                      Purchase Now <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  </a>
+                  <Link to="/contact">
+                    <Button variant="outline" className="gap-2 rounded-full border-2">
+                      Contact for Details
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 text-center animate-fade-up">
+            <Store className="w-12 h-12 text-primary mx-auto mb-6" />
+            <h3 className="text-2xl font-bold text-foreground mb-4">More Products Coming Soon</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+              We're continuously expanding our partner and reseller portfolio to bring you more trusted products and services.
+            </p>
+            <Link to="/contact">
+              <Button variant="gradient" className="gap-2 rounded-full border-2">
+                Request a Product
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

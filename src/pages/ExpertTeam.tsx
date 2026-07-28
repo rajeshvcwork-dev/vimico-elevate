@@ -63,7 +63,7 @@ const ExpertTeam = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-vimico-navy/90 via-vimico-navy/80 to-vimico-navy/70" />
         </div>
         
-        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32 flex flex-col items-center justify-center">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32 flex flex-col items-center justify-center">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
               Our People

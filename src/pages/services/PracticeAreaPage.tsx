@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, ArrowRight, Check, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -77,7 +78,8 @@ const PracticeAreaPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-vimico-navy/95 via-vimico-navy/85 to-vimico-navy/70" />
         </div>
-        <div className="relative container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
+        <Hero3D variant="practice" />
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
           <Link to="/services">
             <Button
               variant="outline"

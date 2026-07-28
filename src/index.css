@@ -240,4 +240,29 @@
   .marquee-container:hover .animate-marquee {
     animation-play-state: paused;
   }
+
+  @keyframes ring-spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+
+  @keyframes ring-spin-rev {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-360deg); }
+  }
+
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+
+  .animate-ring-spin { animation: ring-spin 26s linear infinite; }
+  .animate-ring-spin-rev { animation: ring-spin-rev 34s linear infinite; }
+  .animate-float-soft { animation: float-soft 6s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ring-spin,
+    .animate-ring-spin-rev,
+    .animate-float-soft { animation: none; }
+  }
 }

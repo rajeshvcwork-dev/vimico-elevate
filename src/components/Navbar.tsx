@@ -27,9 +27,12 @@ const Navbar = () => {
     { name: "Fewdrops.Succulents", path: "/products#fewdrops" },
   ];
 
-  const resellersSubmenu = [
-    { name: "FlexiSpy", path: "/resellers#flexispy" },
-    { name: "Domain Services", path: "/resellers#domain-services" },
+  const partnershipSubmenu = [
+    { name: "iZND SDN BHD", path: "/partnership" },
+    { name: "RISP Consulting", path: "/partnership" },
+    { name: "MediSure Healthcare", path: "/partnership" },
+    { name: "FlexiSpy", path: "/partnership#flexispy" },
+    { name: "Domain Services", path: "/partnership#domain-services" },
   ];
 
   const navLinks: Array<{
@@ -40,9 +43,9 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Services", path: "/services", submenu: servicesSubmenu },
     { name: "Products", path: "/products", submenu: productsSubmenu },
-    { name: "Resellers", path: "/resellers", submenu: resellersSubmenu },
-    { name: "Partnership", path: "/partnership" },
-    { name: "Marketing", path: "/marketing" },
+    { name: "Partnerships", path: "/partnership", submenu: partnershipSubmenu },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Contact", path: "/contact" },
     { name: "About Vimico", path: "/about" },
   ];

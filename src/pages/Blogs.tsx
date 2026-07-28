@@ -4,16 +4,17 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import heroMarketing from "@/assets/hero-marketing.jpg";
 
-const Marketing = () => {
+const Blogs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Marketing & Updates | Vimico - Follow Us on LinkedIn</title>
-        <meta name="description" content="Stay connected with Vimico on LinkedIn. Get the latest industry insights, company updates, Agile tips, and digital transformation news from our expert team." />
-        <meta name="keywords" content="Vimico LinkedIn, technology updates, Agile insights, digital transformation news, company updates, industry trends" />
-        <link rel="canonical" href="https://vimico.in/marketing" />
+        <title>Blogs & Insights | Vimico - Industry Updates on LinkedIn</title>
+        <meta name="description" content="Read Vimico blogs and insights. Industry trends, Agile tips, delivery excellence and digital transformation updates from our expert team." />
+        <meta name="keywords" content="Vimico blogs, technology insights, Agile insights, digital transformation news, company updates, industry trends" />
+        <link rel="canonical" href="https://vimico.in/blogs" />
       </Helmet>
       
       <Navbar />
@@ -23,23 +24,24 @@ const Marketing = () => {
         <div className="absolute inset-0">
           <img 
             src={heroMarketing} 
-            alt="Marketing" 
+            alt="Vimico blogs and insights" 
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
         </div>
+        <Hero3D variant="blogs" />
         
-        <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
-              Promoting Our Services
+              Blogs & Insights
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Connect With Us on{" "}
-              <span className="gradient-text">LinkedIn</span>
+              Ideas, insights &{" "}
+              <span className="gradient-text">field notes</span>
             </h1>
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-3xl mx-auto">
-              Stay updated with our latest insights, industry trends, and company updates through our LinkedIn presence.
+              Our latest writing on transformation, delivery, analytics and leadership — published regularly on LinkedIn.
             </p>
             <a 
               href="https://www.linkedin.com/company/vimico-org" 
@@ -48,7 +50,7 @@ const Marketing = () => {
             >
               <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
                 <Linkedin className="w-5 h-5" />
-                Follow Us on LinkedIn
+                Read on LinkedIn
               </Button>
             </a>
           </div>
@@ -60,7 +62,7 @@ const Marketing = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Latest <span className="gradient-text">Updates</span>
+              Latest <span className="gradient-text">Posts</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Follow our journey and stay connected with our latest news and insights
@@ -121,7 +123,7 @@ const Marketing = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Follow <span className="gradient-text">Vimico</span>?
+              Why Read <span className="gradient-text">Vimico</span>?
             </h2>
           </div>
 
@@ -183,4 +185,4 @@ const Marketing = () => {
   );
 };
 
-export default Marketing;
+export default Blogs;
