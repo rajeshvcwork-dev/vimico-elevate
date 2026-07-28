@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import { practiceAreas } from "@/data/practiceAreas";
 import heroAbout from "@/assets/hero-about.jpg";
 
@@ -29,8 +30,13 @@ const industries = [
   },
   {
     icon: Stethoscope,
-    name: "Healthcare & Life Sciences",
-    clients: ["AstraZeneca"],
+    name: "Healthcare, Therapy & Life Sciences",
+    clients: ["AstraZeneca", "MediSure Healthcare", "GripNovaco (physiotherapy & pain-free motion)"],
+  },
+  {
+    icon: Smartphone,
+    name: "Mobile Applications",
+    clients: ["Consumer and enterprise mobile apps across iOS and Android"],
   },
   {
     icon: ShoppingBag,
@@ -76,6 +82,7 @@ const About = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-vimico-navy/90 via-vimico-navy/80 to-vimico-navy/70" />
         </div>
+        <Hero3D variant="about" />
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
@@ -117,8 +124,7 @@ const About = () => {
                     <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-primary-foreground text-5xl font-bold mb-6">
                       V
                     </div>
-                    <div className="text-primary-foreground font-semibold text-lg">Founder & CEO</div>
-                    <div className="text-muted text-sm mt-1">Vimico</div>
+                    <div className="text-primary-foreground font-semibold text-lg">Vimico</div>
                   </div>
                 </div>
               </div>
@@ -177,7 +183,7 @@ const About = () => {
               Where we create <span className="gradient-text">measurable impact</span>
             </h2>
             <p className="text-muted-foreground text-lg">
-              Nine focused practices — each backed by a repeatable methodology and outcome-driven engagement model.
+              Nine focused practices — each backed by a repeatable methodology and outcome-driven engagement model. Our work spans enterprise transformation as well as specialised domains such as therapy and healthcare platforms and mobile applications.
             </p>
           </div>
 
