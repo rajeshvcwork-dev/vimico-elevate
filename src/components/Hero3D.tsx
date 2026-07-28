@@ -63,7 +63,7 @@ const Hero3D = ({ variant, className = "" }: Hero3DProps) => {
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
+      className={`pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-70 ${className}`}
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.18),transparent_65%)]" />
       <div
