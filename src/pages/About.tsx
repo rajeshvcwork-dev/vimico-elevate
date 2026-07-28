@@ -1,4 +1,4 @@
-import { CheckCircle, Building2, Hotel, Landmark, Stethoscope, ShoppingBag, Cpu, ArrowRight } from "lucide-react";
+import { CheckCircle, Building2, Hotel, Landmark, Stethoscope, ShoppingBag, Cpu, Smartphone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
