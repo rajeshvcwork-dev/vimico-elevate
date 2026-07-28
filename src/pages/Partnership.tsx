@@ -292,6 +292,82 @@ const Partnership = () => {
         </div>
       </section>
 
+      {/* Reseller Products (merged from Resellers) */}
+      <section id="reseller-products" className="py-20 lg:py-28 bg-muted/30 scroll-mt-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-14 animate-fade-up max-w-3xl mx-auto">
+            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold uppercase tracking-wider mb-4">
+              Authorized Reseller
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Products we <span className="gradient-text">resell & support</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Beyond partnerships, Vimico is an authorized reseller for premium products and services.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {resellerProducts.map((product, index) => (
+              <div
+                key={product.name}
+                id={product.id}
+                className="group relative bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 card-hover animate-fade-up scroll-mt-24"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                  <div>
+                    <div className={`inline-flex w-14 h-14 rounded-2xl bg-gradient-to-br ${product.gradient} items-center justify-center mb-6`}>
+                      <product.icon className="w-7 h-7 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">{product.name}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                  </div>
+
+                  <div className="bg-muted/50 rounded-2xl p-6">
+                    <h4 className="font-semibold text-foreground mb-4">Features</h4>
+                    <ul className="space-y-3">
+                      {product.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-muted-foreground">
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-br ${product.gradient} mt-2 flex-shrink-0`} />
+                          <span className="text-sm">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-border/50 flex flex-wrap gap-4">
+                  <a href={product.link} target="_blank" rel="noopener noreferrer">
+                    <Button variant="gradient" className="gap-2 rounded-full border-2">
+                      Purchase Now <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  </a>
+                  <Link to="/contact">
+                    <Button variant="outline" className="gap-2 rounded-full border-2">
+                      Contact for Details
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-card rounded-3xl p-8 lg:p-12 shadow-card border border-border/50 text-center animate-fade-up">
+            <Store className="w-12 h-12 text-primary mx-auto mb-6" />
+            <h3 className="text-2xl font-bold text-foreground mb-4">More Products Coming Soon</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
+              We're continuously expanding our partner and reseller portfolio to bring you more trusted products and services.
+            </p>
+            <Link to="/contact">
+              <Button variant="gradient" className="gap-2 rounded-full border-2">
+                Request a Product
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-vimico-navy via-vimico-navy to-secondary/30">
         <div className="container mx-auto px-4 lg:px-8 text-center">
