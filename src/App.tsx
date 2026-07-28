@@ -9,9 +9,10 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Partnership from "./pages/Partnership";
 import Products from "./pages/Products";
-import Resellers from "./pages/Resellers";
-import Marketing from "./pages/Marketing";
+import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
+import Admin from "./pages/Admin";
 import Privacy from "./pages/Privacy";
 import Refund from "./pages/Refund";
 import ExpertTeam from "./pages/ExpertTeam";
@@ -38,8 +39,11 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/partnership" element={<Partnership />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/resellers" element={<Resellers />} />
-          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/resellers" element={<Navigate to="/partnership#reseller-products" replace />} />
+          <Route path="/marketing" element={<Navigate to="/blogs" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
