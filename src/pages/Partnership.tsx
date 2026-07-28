@@ -1,18 +1,53 @@
-import { ExternalLink, Globe, Handshake, TrendingUp } from "lucide-react";
+import { ExternalLink, Globe, Handshake, TrendingUp, Shield, Store } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import portfolioHero from "@/assets/hero-portfolio.jpg";
+
+const resellerProducts = [
+  {
+    name: "FlexiSpy",
+    description:
+      "FlexiSpy is a powerful monitoring solution for parents and employers. Track device activity, monitor communications, and ensure digital safety with this comprehensive tool.",
+    features: [
+      "Call and message monitoring",
+      "GPS location tracking",
+      "Social media monitoring",
+      "Remote camera and microphone access",
+      "And many more features...",
+    ],
+    link: "https://www.flexispy.com?a_aid=e464f5c3",
+    icon: Shield,
+    gradient: "from-secondary to-accent",
+    id: "flexispy",
+  },
+  {
+    name: "Domain Services",
+    description:
+      "Register and manage domain names through Vimico. We offer competitive pricing on popular domain extensions with full DNS management and domain privacy protection.",
+    features: [
+      "Wide range of domain extensions (.com, .in, .co, .io, etc.)",
+      "Easy domain management dashboard",
+      "Domain privacy protection",
+      "DNS management included",
+    ],
+    link: "https://vimico-domain-seller.supersite2.myorderbox.com/",
+    icon: Globe,
+    gradient: "from-primary to-secondary",
+    id: "domain-services",
+  },
+];
 
 const Partnership = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Partnership | Vimico - Global Strategic Alliances</title>
-        <meta name="description" content="Explore Vimico's strategic partnerships with iZND Group, RISP Consulting, and MediSure Healthcare. Building global alliances for digital transformation across Asia and Africa." />
-        <meta name="keywords" content="Vimico partners, strategic alliances, iZND Group, RISP Consulting, MediSure Healthcare, global partnerships, technology partners" />
+        <title>Partnerships & Resellers | Vimico Global Alliances</title>
+        <meta name="description" content="Vimico's strategic partnerships with iZND Group, RISP Consulting and MediSure Healthcare, plus our authorized reseller products — FlexiSpy and domain services." />
+        <meta name="keywords" content="Vimico partners, strategic alliances, iZND Group, RISP Consulting, MediSure Healthcare, FlexiSpy reseller, domain reseller" />
         <link rel="canonical" href="https://vimico.in/partnership" />
       </Helmet>
       
@@ -28,23 +63,31 @@ const Partnership = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
         </div>
+        <Hero3D variant="partnership" />
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 gap-2 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
-              Strategic Partnerships
+              Partnerships & Resellers
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
               Building <span className="gradient-text">Global Alliances</span>
             </h1>
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-3xl mx-auto">
-              Vimico partners with industry leaders to deliver exceptional value and expand reach across emerging markets worldwide.
+              Vimico partners with industry leaders and resells trusted products — delivering exceptional value across emerging markets worldwide.
             </p>
-            <Link to="/contact">
-              <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
-                Explore Partnership Opportunities
-              </Button>
-            </Link>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link to="/contact">
+                <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
+                  Explore Partnership Opportunities
+                </Button>
+              </Link>
+              <a href="#reseller-products">
+                <Button variant="hero" size="xl" className="gap-2 rounded-full border-2">
+                  Reseller Products
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
