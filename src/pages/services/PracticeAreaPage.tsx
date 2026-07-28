@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, ArrowRight, Check, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
