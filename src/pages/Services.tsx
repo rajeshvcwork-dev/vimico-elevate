@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import servicesHero from "@/assets/hero-services.jpg";
 
 import { practiceAreas } from "@/data/practiceAreas";
@@ -37,6 +38,7 @@ const Services = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
         </div>
+        <Hero3D variant="services" />
         
         <div className="relative container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
