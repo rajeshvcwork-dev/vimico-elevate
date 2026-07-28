@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero3D from "@/components/Hero3D";
 import heroProducts from "@/assets/hero-products.jpg";
 
 const products = [
