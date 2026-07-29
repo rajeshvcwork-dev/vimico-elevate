@@ -53,7 +53,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-vimico-navy/95 backdrop-blur-xl border-b border-primary/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-vimico-navy/90 backdrop-blur-xl border-b border-primary/15 shadow-[0_2px_24px_hsl(var(--primary)/0.08)]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
@@ -61,23 +61,28 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) =>
               link.submenu ? (
                 <div key={link.path} className="relative group">
                   <Link
                     to={link.path}
-                    className={`nav-link text-base font-medium inline-flex items-center gap-1 ${
+                    className={`relative inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-[0.95rem] font-medium tracking-tight transition-all duration-200 hover:bg-primary/10 ${
                       isActive(link.path)
-                        ? "text-primary font-semibold"
+                        ? "text-primary font-semibold bg-primary/10"
                         : "text-primary-foreground/80 hover:text-primary"
                     }`}
                   >
                     {link.name}
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    <ChevronDown className="w-3.5 h-3.5 opacity-70 transition-transform duration-200 group-hover:rotate-180" />
+                    <span
+                      className={`pointer-events-none absolute left-3 right-3 -bottom-0.5 h-px bg-gradient-to-r from-primary to-secondary transition-transform duration-200 origin-left ${
+                        isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      }`}
+                    />
                   </Link>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="min-w-[240px] bg-vimico-navy border border-primary/30 rounded-xl shadow-2xl py-2">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div className="min-w-[260px] bg-vimico-navy/98 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl p-2 ring-1 ring-black/20">
                       {link.submenu.map((item) =>
                         item.external ? (
                           <a
@@ -85,7 +90,7 @@ const Navbar = () => {
                             href={item.path}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-4 py-2 text-sm text-primary-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
+                            className="block px-3 py-2 rounded-lg text-sm text-primary-foreground/75 hover:text-primary hover:bg-primary/10 transition-colors"
                           >
                             {item.name}
                           </a>
@@ -93,7 +98,7 @@ const Navbar = () => {
                           <Link
                             key={item.name}
                             to={item.path}
-                            className="block px-4 py-2 text-sm text-primary-foreground/80 hover:text-primary hover:bg-primary/10 transition-colors"
+                            className="block px-3 py-2 rounded-lg text-sm text-primary-foreground/75 hover:text-primary hover:bg-primary/10 transition-colors"
                           >
                             {item.name}
                           </Link>
@@ -106,13 +111,18 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`nav-link text-base font-medium ${
+                  className={`group relative px-3 py-2 rounded-lg text-[0.95rem] font-medium tracking-tight transition-all duration-200 hover:bg-primary/10 ${
                     isActive(link.path)
-                      ? "text-primary font-semibold"
+                      ? "text-primary font-semibold bg-primary/10"
                       : "text-primary-foreground/80 hover:text-primary"
                   }`}
                 >
                   {link.name}
+                  <span
+                    className={`pointer-events-none absolute left-3 right-3 -bottom-0.5 h-px bg-gradient-to-r from-primary to-secondary transition-transform duration-200 origin-left ${
+                      isActive(link.path) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
                 </Link>
               )
             )}
