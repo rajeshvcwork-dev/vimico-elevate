@@ -81,8 +81,8 @@ const Navbar = () => {
                       }`}
                     />
                   </Link>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-                    <div className="min-w-[260px] bg-vimico-navy/98 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl p-2 ring-1 ring-black/20">
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-[70]">
+                    <div className="min-w-[260px] bg-vimico-navy border border-primary/25 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.55)] p-2 ring-1 ring-black/30">
                       {link.submenu.map((item) =>
                         item.external ? (
                           <a
