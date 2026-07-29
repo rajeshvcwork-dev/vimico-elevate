@@ -57,7 +57,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-3">
-            <img src={vimicoLogo} alt="Vimico" className="h-14 w-auto" />
+            <img
+              src={vimicoLogo}
+              alt="Vimico"
+              className="h-14 w-auto rounded-xl ring-1 ring-primary/20 shadow-sm transition-transform duration-200 hover:scale-[1.03]"
+            />
           </Link>
 
           {/* Desktop Navigation */}
