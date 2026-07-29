@@ -9,7 +9,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Hero3D from "@/components/Hero3D";
 import heroContact from "@/assets/hero-contact.jpg";
 
 const services = [
@@ -130,7 +129,6 @@ const Contact = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/80 to-vimico-navy/60" />
         </div>
-        <Hero3D variant="contact" />
         
         <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
