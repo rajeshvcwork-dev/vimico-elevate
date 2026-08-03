@@ -25,6 +25,7 @@ interface FormState {
   person_title: string;
   website_url: string;
   logo_url: string;
+  rating: string;
   display_order: number;
   published: boolean;
 }
@@ -36,6 +37,7 @@ const emptyForm: FormState = {
   person_title: "",
   website_url: "",
   logo_url: "",
+  rating: "",
   display_order: 0,
   published: true,
 };
@@ -172,6 +174,7 @@ const Admin = () => {
       person_title: form.person_title.trim() || null,
       website_url: form.website_url.trim() || null,
       logo_url: form.logo_url.trim() || null,
+      rating: form.rating.trim() ? Number(form.rating) : null,
       display_order: Number(form.display_order) || 0,
       published: form.published,
     };
@@ -320,6 +323,11 @@ const Admin = () => {
           </div>
           <div className="space-y-4">
             <div>
+              <Label htmlFor="rating">Rating (out of 5)</Label>
+              <Input id="rating" type="number" step="0.1" min="0" max="5" value={form.rating}
+                onChange={(e) => setForm({ ...form, rating: e.target.value })} className="mt-1" />
+            </div>
+            <div>
               <Label htmlFor="order">Display order</Label>
               <Input id="order" type="number" value={form.display_order}
                 onChange={(e) => setForm({ ...form, display_order: Number(e.target.value) })} className="mt-1" />
@@ -375,6 +383,7 @@ const Admin = () => {
                 person_title: t.person_title ?? "",
                 website_url: t.website_url ?? "",
                 logo_url: t.logo_url ?? "",
+                rating: t.rating != null ? String(t.rating) : "",
                 display_order: t.display_order,
                 published: t.published,
               })}>

@@ -25,6 +25,7 @@ export type Database = {
           person_title: string | null
           published: boolean
           quote: string
+          rating: number | null
           updated_at: string
           website_url: string | null
         }
@@ -38,6 +39,7 @@ export type Database = {
           person_title?: string | null
           published?: boolean
           quote: string
+          rating?: number | null
           updated_at?: string
           website_url?: string | null
         }
@@ -51,6 +53,7 @@ export type Database = {
           person_title?: string | null
           published?: boolean
           quote?: string
+          rating?: number | null
           updated_at?: string
           website_url?: string | null
         }

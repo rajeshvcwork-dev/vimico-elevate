@@ -6,6 +6,29 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
+import gripnovaLogo from "@/assets/gripnovaco-logo.png";
+
+const localLogos: Record<string, string> = {
+  gripnova: gripnovaLogo,
+  gripnovaco: gripnovaLogo,
+};
+
+const StarRating = ({ rating }: { rating: number }) => (
+  <div className="flex items-center gap-1 mb-4" aria-label={`Rated ${rating} out of 5`}>
+    {[0, 1, 2, 3, 4].map((i) => {
+      const fill = Math.max(0, Math.min(1, rating - i));
+      return (
+        <span key={i} className="relative w-5 h-5">
+          <Star className="w-5 h-5 absolute inset-0 text-muted-foreground/40" />
+          <span className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
+            <Star className="w-5 h-5 text-primary fill-primary" />
+          </span>
+        </span>
+      );
+    })}
+    <span className="ml-2 text-sm font-semibold text-foreground">{rating.toFixed(1)} / 5</span>
+  </div>
+);
 
 export interface Testimonial {
   id: string;
@@ -15,6 +38,7 @@ export interface Testimonial {
   person_name: string;
   person_title: string | null;
   website_url: string | null;
+  rating: number | null;
   display_order: number;
   published: boolean;
 }
@@ -31,7 +55,7 @@ const Testimonials = () => {
         .eq("published", true)
         .order("display_order", { ascending: true })
         .order("created_at", { ascending: false });
-      setItems((data as Testimonial[]) ?? []);
+      setItems(((data ?? []) as unknown as Testimonial[]));
       setLoading(false);
     };
     load();
@@ -88,11 +112,13 @@ const Testimonials = () => {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {items.map((t, i) => {
+                const logoSrc =
+                  t.logo_url ?? localLogos[t.brand_name.toLowerCase().replace(/[^a-z]/g, "")];
                 const Logo = (
                   <div className="h-16 flex items-center justify-start mb-6">
-                    {t.logo_url ? (
+                    {logoSrc ? (
                       <img
-                        src={t.logo_url}
+                        src={logoSrc}
                         alt={`${t.brand_name} logo`}
                         loading="lazy"
                         className="max-h-16 w-auto object-contain"
@@ -115,6 +141,7 @@ const Testimonials = () => {
                     ) : (
                       Logo
                     )}
+                    {t.rating != null && <StarRating rating={Number(t.rating)} />}
                     <Quote className="w-8 h-8 text-primary mb-4" />
                     <p className="text-muted-foreground leading-relaxed italic flex-1">"{t.quote}"</p>
                     <div className="mt-6 pt-6 border-t border-border/50">

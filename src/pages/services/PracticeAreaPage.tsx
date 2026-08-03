@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, ArrowRight, Check, ExternalLink } from "lucide-react";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { practiceAreaBySlug } from "@/data/practiceAreas";
-import servicesHero from "@/assets/hero-services.jpg";
 
 const Section = ({
   title,
@@ -56,40 +55,52 @@ const PracticeAreaPage = () => {
 
   const canonical = `https://vimico.in/services/${area.slug}`;
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: area.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: area.title,
+    serviceType: area.title,
+    description: area.seoDescription,
+    url: canonical,
+    provider: {
+      "@type": "ProfessionalService",
+      name: "Vimico",
+      url: "https://vimico.in",
+    },
+    areaServed: "Global",
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{area.title} | Vimico Practice Areas</title>
+        <title>{area.title} Consulting Services | Vimico</title>
         <meta name="description" content={area.seoDescription} />
         <meta name="keywords" content={area.keywords} />
         <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={`${area.title} Consulting Services | Vimico`} />
+        <meta property="og:description" content={area.seoDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify(serviceJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
       </Helmet>
 
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[560px] pt-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={servicesHero}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-vimico-navy/95 via-vimico-navy/85 to-vimico-navy/70" />
-        </div>
+      <section className="relative min-h-[560px] pt-20 overflow-hidden bg-gradient-to-br from-vimico-navy via-vimico-navy to-secondary/30">
         <div className="relative z-10 container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
-          <Link to="/services">
-            <Button
-              variant="outline"
-              size="sm"
-              className="mb-8 rounded-full border-primary/40 bg-primary/10 text-primary-foreground hover:bg-primary/20 gap-2"
-            >
-              <ArrowLeft className="w-4 h-4" /> Back to Services
-            </Button>
-          </Link>
-          <span className="inline-block px-4 py-1.5 rounded-full border-2 border-primary/40 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
-            Practice Area
-          </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
             {area.title}
           </h1>
@@ -111,12 +122,11 @@ const PracticeAreaPage = () => {
         </div>
       </section>
 
-      {/* Executive Summary */}
-      <Section title="Executive Summary">
+      <Section title={`What ${area.title} Means for Your Business`}>
         <p className="text-lg leading-relaxed">{area.executiveSummary}</p>
       </Section>
 
-      <Section title="Business Challenges Addressed">
+      <Section title="Challenges Our Clients Face">
         <BulletList items={area.challenges} />
       </Section>
 
@@ -124,7 +134,7 @@ const PracticeAreaPage = () => {
         <BulletList items={area.targetCustomers} />
       </Section>
 
-      <Section title="Scope of Services">
+      <Section title="What Vimico Does">
         <BulletList items={area.scope} />
       </Section>
 
@@ -132,11 +142,11 @@ const PracticeAreaPage = () => {
         <BulletList items={area.deliverables} />
       </Section>
 
-      <Section title="Customer Outcomes / Business Value">
+      <Section title="Business Value You Can Measure">
         <BulletList items={area.outcomes} />
       </Section>
 
-      <Section title="Consulting Methodology">
+      <Section title="How Vimico Works With You">
         <ol className="space-y-4">
           {area.methodology.map((step, i) => (
             <li
