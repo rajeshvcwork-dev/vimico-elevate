@@ -1,6 +1,17 @@
+import heroBusinessTransformation from "@/assets/services/hero-business-transformation.jpg";
+import heroErp from "@/assets/services/hero-erp.jpg";
+import heroAi from "@/assets/services/hero-ai.jpg";
+import heroAnalytics from "@/assets/services/hero-analytics.jpg";
+import heroGrc from "@/assets/services/hero-grc.jpg";
+import heroCoaching from "@/assets/services/hero-coaching.jpg";
+import heroDomainiq from "@/assets/services/hero-domainiq.jpg";
+import heroWebsite from "@/assets/services/hero-website.jpg";
+import heroDomainServices from "@/assets/services/hero-domain-services.jpg";
+
 export interface PracticeArea {
   slug: string;
   title: string;
+  heroImage: string;
   tagline: string;
   executiveSummary: string;
   challenges: string[];
