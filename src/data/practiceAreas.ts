@@ -33,6 +33,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "business-transformation",
     title: "Business Transformation",
+    heroImage: heroBusinessTransformation,
     tagline: "Redesign your operating model to scale intelligently and execute with precision.",
     executiveSummary:
       "Business transformation is the work of redesigning how your company is structured, governed, and run so growth stops breaking your operations. Vimico's business transformation consulting rebuilds your operating model, decision rights, organization design, and execution cadence so strategy actually lands in the day-to-day work of your teams. We start with the outcomes you are accountable for — revenue predictability, margin, delivery reliability, customer retention — then reshape the processes, roles, technology, and management rhythm that drive them. Whether you are scaling from 50 to 500 people, integrating an acquisition, standing up a global capability centre, or preparing a PE-backed business for its next stage, we work shoulder-to-shoulder with your leadership team so the new operating model is adopted, measured, and sustained long after the engagement ends.",
@@ -211,6 +212,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "ai-strategy",
     title: "AI Strategy & Adoption",
+    heroImage: heroAi,
     tagline: "Move from AI experimentation to accountable, business-outcome-driven adoption.",
     executiveSummary:
       "An AI strategy is not a list of tools — it is a decision about where artificial intelligence will create measurable value in your business, and how you will govern it. Vimico helps leadership teams cut through generative AI hype and build a pragmatic enterprise AI adoption strategy: where AI belongs in your workflows, which use cases earn funding first, what data and platform foundations are required, and which guardrails keep you compliant and credible. We assess your data maturity, run structured use-case discovery across functions, size the business case for each opportunity, and design the responsible-AI governance that risk, legal, and security teams will sign off on. Then we help you move from scattered pilots to production — with adoption plans, AI literacy programmes for your workforce, and ROI measurement that proves the value to your board.",
@@ -468,6 +470,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "grc",
     title: "Governance, Risk & Compliance",
+    heroImage: heroGrc,
     tagline: "Strengthen controls, reduce risk, and satisfy auditors without slowing the business.",
     executiveSummary:
       "We help organizations design and mature their GRC programs — from policy and controls to information security, privacy, and audit readiness across regulated and unregulated environments.",
@@ -552,6 +555,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "executive-coaching",
     title: "Executive Coaching & Leadership Advisory",
+    heroImage: heroCoaching,
     tagline: "Build the leadership capability your operating model depends on.",
     executiveSummary:
       "We coach leaders and leadership teams through the transitions that matter — scaling, restructuring, cross-cultural leadership, and execution maturity — combining 1:1 coaching with team-level advisory.",
@@ -634,6 +638,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "domainiq",
     title: "DomainIQ Insight Platform",
+    heroImage: heroDomainiq,
     tagline: "AI-powered domain due diligence — from registration to valuation in one intelligence report.",
     executiveSummary:
       "DomainIQ Insight is Vimico's AI-powered platform for domain due diligence. Enter a domain and receive a synthesized intelligence report covering registration, history, SEO, security, brand, tech stack, and valuation — designed for investors, acquirers, and brand teams.",
