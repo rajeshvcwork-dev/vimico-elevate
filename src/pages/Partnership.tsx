@@ -23,21 +23,6 @@ const resellerProducts = [
     gradient: "from-secondary to-accent",
     id: "flexispy",
   },
-  {
-    name: "Domain Services",
-    description:
-      "Register and manage domain names through Vimico. We offer competitive pricing on popular domain extensions with full DNS management and domain privacy protection.",
-    features: [
-      "Wide range of domain extensions (.com, .in, .co, .io, etc.)",
-      "Easy domain management dashboard",
-      "Domain privacy protection",
-      "DNS management included",
-    ],
-    link: "https://vimico-domain-seller.supersite2.myorderbox.com/",
-    icon: Globe,
-    gradient: "from-primary to-secondary",
-    id: "domain-services",
-  },
 ];
 
 const Partnership = () => {

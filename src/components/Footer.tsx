@@ -22,10 +22,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/services/domainiq" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">DomainIQ Insight</Link></li>
               <li><Link to="/services/business-transformation" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Business Transformation</Link></li>
-              <li><Link to="/services/delivery-excellence" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Delivery Excellence</Link></li>
+              <li><Link to="/services/erp-implementation" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">ERP Implementation</Link></li>
               <li><Link to="/services/ai-strategy" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">AI Strategy & Adoption</Link></li>
-              <li><Link to="/services/fpa-epm" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">FP&A / EPM</Link></li>
-              <li><Link to="/services/powerbi" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Power BI & Analytics</Link></li>
+              <li><Link to="/services/powerbi" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">EPM & Power BI Analytics</Link></li>
+              <li><Link to="/services/domain-services" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Domain Services</Link></li>
               <li><Link to="/services/grc" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Governance, Risk & Compliance</Link></li>
               <li><Link to="/services/executive-coaching" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Executive Coaching</Link></li>
               <li><Link to="/services/website" className="text-muted-foreground hover:text-primary-foreground text-sm transition-colors">Website Development</Link></li>

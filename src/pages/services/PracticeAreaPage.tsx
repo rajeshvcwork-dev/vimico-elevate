@@ -99,7 +99,17 @@ const PracticeAreaPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[560px] pt-20 overflow-hidden bg-gradient-to-br from-vimico-navy via-vimico-navy to-secondary/30">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={area.heroImage}
+            alt={`${area.title} services by Vimico`}
+            className="w-full h-full object-cover"
+            width={1536}
+            height={768}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/85 to-vimico-navy/65" />
+        </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8 py-20 lg:py-28 max-w-5xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
             {area.title}
@@ -116,6 +126,27 @@ const PracticeAreaPage = () => {
             >
               <Button variant="gradient" size="lg" className="rounded-full gap-2">
                 Launch DomainIQ Insight <ExternalLink className="w-4 h-4" />
+              </Button>
+            </a>
+          )}
+          {area.slug === "website" && (
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Link to="/services/domain-services" className="inline-flex">
+                <Button variant="gradient" size="lg" className="rounded-full gap-2">
+                  Buy a Domain <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
+          )}
+          {area.slug === "domain-services" && (
+            <a
+              href="https://vimico-domain-seller.supersite2.myorderbox.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mt-8"
+            >
+              <Button variant="gradient" size="lg" className="rounded-full gap-2">
+                Search & Buy Domains <ExternalLink className="w-4 h-4" />
               </Button>
             </a>
           )}

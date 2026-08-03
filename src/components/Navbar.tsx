@@ -11,14 +11,14 @@ const Navbar = () => {
 
   const servicesSubmenu = [
     { name: "Business Transformation", path: "/services/business-transformation" },
-    { name: "Delivery Excellence", path: "/services/delivery-excellence" },
+    { name: "ERP Implementation", path: "/services/erp-implementation" },
     { name: "AI Strategy & Adoption", path: "/services/ai-strategy" },
-    { name: "FP&A / EPM Consulting", path: "/services/fpa-epm" },
-    { name: "Power BI & Business Analytics", path: "/services/powerbi" },
+    { name: "EPM Consulting & Power BI Analytics", path: "/services/powerbi" },
     { name: "Governance, Risk & Compliance", path: "/services/grc" },
     { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
     { name: "DomainIQ Insight Platform", path: "/services/domainiq" },
-    { name: "Website Development & Digital", path: "/services/website" },
+    { name: "Website Development & Hosting", path: "/services/website" },
+    { name: "Domain Purchase & Domain Services", path: "/services/domain-services" },
   ];
 
   const productsSubmenu = [
@@ -32,7 +32,6 @@ const Navbar = () => {
     { name: "RISP Consulting", path: "/partnership" },
     { name: "MediSure Healthcare", path: "/partnership" },
     { name: "FlexiSpy", path: "/partnership#flexispy" },
-    { name: "Domain Services", path: "/partnership#domain-services" },
   ];
 
   const navLinks: Array<{
