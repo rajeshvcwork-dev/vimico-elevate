@@ -10,15 +10,15 @@ const Navbar = () => {
   const location = useLocation();
 
   const servicesSubmenu = [
+    { name: "AI Strategy Adoption", path: "/services/ai-strategy" },
     { name: "Business Transformation", path: "/services/business-transformation" },
+    { name: "DomainIQ Insight", path: "/services/domainiq" },
+    { name: "Domain Purchase", path: "/services/domain-services" },
     { name: "ERP Implementation", path: "/services/erp-implementation" },
-    { name: "AI Strategy & Adoption", path: "/services/ai-strategy" },
-    { name: "EPM Consulting & Power BI Analytics", path: "/services/powerbi" },
-    { name: "Governance, Risk & Compliance", path: "/services/grc" },
+    { name: "EPM & Power BI Consulting", path: "/services/powerbi" },
+    { name: "Governance Risk & Compliance", path: "/services/grc" },
     { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
-    { name: "DomainIQ Insight Platform", path: "/services/domainiq" },
     { name: "Website Development & Hosting", path: "/services/website" },
-    { name: "Domain Purchase & Domain Services", path: "/services/domain-services" },
   ];
 
   const productsSubmenu = [
