@@ -114,13 +114,14 @@ export const practiceAreas: PracticeArea[] = [
     title: "Delivery Excellence",
     tagline: "Turn fragmented delivery into predictable, high-performing execution.",
     executiveSummary:
-      "We modernize how organizations plan, deliver, and govern work — combining Agile at scale, Jira/Salesforce enablement, and support operations design to deliver predictable outcomes and eliminate execution drag.",
+      "Delivery excellence is what turns effort into dependable outcomes. Vimico modernises how your organisation plans, delivers, and governs work — combining Agile and SAFe coaching, Jira and Salesforce enablement, portfolio visibility, and support operations design into one connected delivery system. Most teams do not have a motivation problem; they have a system problem: too much work in flight, tooling that fights the process, and no honest view of progress. We fix the system. Your teams get a right-sized Agile delivery framework, clean Jira workflows and automations, sensible ceremonies, service-level commitments that hold, and delivery KPIs your executives can trust. The result is predictable release cadence, faster cycle time, fewer escalations, and delivery leaders who can commit to dates with confidence.",
     challenges: [
-      "Missed commitments and slipping delivery dates",
-      "Inconsistent Agile adoption across teams",
-      "Poor visibility into work in flight",
-      "Ineffective Jira / tooling configurations",
-      "Reactive, undifferentiated customer support operations",
+      "Release dates slip repeatedly and nobody can explain why until it is too late",
+      "Agile is adopted in name only — ceremonies happen, but flow, quality, and predictability do not improve",
+      "Leadership has no trustworthy view of work in flight, dependencies, or capacity",
+      "Jira, Jira Service Management, or Salesforce are configured against the way teams actually work",
+      "Too many parallel priorities, so cycle time stretches and quality debt accumulates",
+      "Customer support is reactive, SLAs are missed, and escalations pull engineers off roadmap work",
     ],
     targetCustomers: [
       "SaaS and product engineering organizations",
@@ -149,11 +150,12 @@ export const practiceAreas: PracticeArea[] = [
       "Improved customer satisfaction and NPS",
     ],
     methodology: [
-      "Assess team and portfolio maturity",
-      "Design a right-sized delivery framework",
-      "Configure tooling to reinforce the framework",
-      "Coach teams and leaders through adoption",
-      "Measure, tune, and scale",
+      "Assess honestly — we review your teams, portfolio, tooling, and metrics to find the real constraints on delivery.",
+      "Right-size the framework — Scrum, Kanban, or scaled Agile is shaped to your context instead of imposing a rigid methodology.",
+      "Make the tooling agree with the process — Jira, JSM, and Salesforce are reconfigured so the workflow reinforces the way of working.",
+      "Coach the people who do the work — scrum masters, product owners, engineering managers, and support leads are coached in-flight, on real work.",
+      "Measure what matters — predictability, cycle time, escalation volume, and SLA attainment are put on dashboards your executives review.",
+      "Scale and transfer ownership — proven patterns are rolled out team by team, with your leaders owning the system at the end.",
     ],
     engagementModels: [
       "Delivery diagnostic (3–4 weeks)",
