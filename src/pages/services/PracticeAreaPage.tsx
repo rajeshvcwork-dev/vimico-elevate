@@ -130,6 +130,27 @@ const PracticeAreaPage = () => {
             </a>
           )}
           {area.slug === "website" && (
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Link to="/services/domain-services" className="inline-flex">
+                <Button variant="gradient" size="lg" className="rounded-full gap-2">
+                  Buy a Domain <ArrowRight className="w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
+          )}
+          {area.slug === "domain-services" && (
+            <a
+              href="https://vimico-domain-seller.supersite2.myorderbox.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex mt-8"
+            >
+              <Button variant="gradient" size="lg" className="rounded-full gap-2">
+                Search & Buy Domains <ExternalLink className="w-4 h-4" />
+              </Button>
+            </a>
+          )}
+          {false && (
             <Link to="/services/domain-services" className="inline-flex mt-8">
               <Button variant="gradient" size="lg" className="rounded-full gap-2">
                 Buy a Domain <ArrowRight className="w-4 h-4" />
