@@ -150,13 +150,6 @@ const PracticeAreaPage = () => {
               </Button>
             </a>
           )}
-          {false && (
-            <Link to="/services/domain-services" className="inline-flex mt-8">
-              <Button variant="gradient" size="lg" className="rounded-full gap-2">
-                Buy a Domain <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          )}
         </div>
       </section>
 
