@@ -19,7 +19,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Services | Vimico - Agile Consulting, Jira & Salesforce Implementation</title>
+        <title>Services | Vimico - Consulting Services & Product</title>
         <meta name="description" content="Transform your business with Vimico's expert services: Agile methodology implementation, Power BI solutions, Jira & Salesforce setup, website development, ERP implementation, and compliance consulting." />
         <meta name="keywords" content="agile consulting, Jira implementation, Salesforce setup, Power BI, website development, compliance audit, digital transformation services, enterprise consulting, ERP implementation" />
         <link rel="canonical" href="https://vimico.in/services" />
