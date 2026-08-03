@@ -55,13 +55,15 @@ const App = () => (
           <Route path="/services/:slug" element={<PracticeAreaPage />} />
 
           {/* Legacy redirects — map old slugs to new practice areas */}
-          <Route path="/services/agile" element={<Navigate to="/services/delivery-excellence" replace />} />
-          <Route path="/services/jira-salesforce" element={<Navigate to="/services/delivery-excellence" replace />} />
-          <Route path="/services/support-setup" element={<Navigate to="/services/delivery-excellence" replace />} />
+          <Route path="/services/agile" element={<Navigate to="/services/erp-implementation" replace />} />
+          <Route path="/services/jira-salesforce" element={<Navigate to="/services/erp-implementation" replace />} />
+          <Route path="/services/support-setup" element={<Navigate to="/services/erp-implementation" replace />} />
+          <Route path="/services/delivery-excellence" element={<Navigate to="/services/erp-implementation" replace />} />
+          <Route path="/services/fpa-epm" element={<Navigate to="/services/powerbi" replace />} />
           <Route path="/services/portfolio-sites" element={<Navigate to="/services/website" replace />} />
           <Route path="/services/data-sanity" element={<Navigate to="/services/powerbi" replace />} />
           <Route path="/services/compliance" element={<Navigate to="/services/grc" replace />} />
-          <Route path="/services/erp" element={<Navigate to="/services/business-transformation" replace />} />
+          <Route path="/services/erp" element={<Navigate to="/services/erp-implementation" replace />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
