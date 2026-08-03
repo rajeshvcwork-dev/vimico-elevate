@@ -667,12 +667,13 @@ export const practiceAreas: PracticeArea[] = [
     heroImage: heroWebsite,
     tagline: "High-performance websites and digital experiences that reflect the brand you're building.",
     executiveSummary:
-      "We design, build, and evolve websites and digital experiences — from corporate sites and portfolio microsites to e-commerce and product marketing platforms — with a strong emphasis on performance, SEO, and craft.",
+      "Website development and hosting under one roof. We design, build, host, and maintain websites — from corporate sites and portfolio microsites to e-commerce and product marketing platforms — with a strong emphasis on performance, SEO, and craft. Alongside the build we handle domain purchase, DNS, hosting setup, SSL, backups, and ongoing maintenance, so you have a single partner accountable for your site being fast, secure, and online.",
     challenges: [
       "Outdated websites that don't reflect brand quality",
       "Slow-loading, poorly optimized pages",
       "Weak SEO and organic discoverability",
-      "Fragmented digital presence across surfaces",
+      "Domain, hosting, and website managed by three different vendors",
+      "Downtime, expired SSL, or missed domain renewals",
       "Inability to iterate content quickly",
     ],
     targetCustomers: [
@@ -684,6 +685,8 @@ export const practiceAreas: PracticeArea[] = [
     scope: [
       "Brand-aligned web design",
       "Responsive, SEO-optimized development",
+      "Domain purchase and DNS configuration",
+      "Web hosting, SSL, backups, and maintenance",
       "CMS integration and content ops",
       "E-commerce and payment integration",
       "Analytics, tag management, and conversion tracking",
@@ -691,6 +694,7 @@ export const practiceAreas: PracticeArea[] = [
     deliverables: [
       "Design system and web components",
       "Production website",
+      "Hosting, domain, and SSL setup",
       "CMS configuration",
       "Analytics and SEO setup",
     ],
