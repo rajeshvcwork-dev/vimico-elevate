@@ -24,13 +24,14 @@ export const practiceAreas: PracticeArea[] = [
     title: "Business Transformation",
     tagline: "Redesign your operating model to scale intelligently and execute with precision.",
     executiveSummary:
-      "We help organizations reimagine their operating model, structure, and execution frameworks so they can scale from growth-stage operations into resilient, multi-hundred-person businesses. Our engagements align strategy, people, process, and technology to unlock measurable business outcomes.",
+      "Business transformation is the work of redesigning how your company is structured, governed, and run so growth stops breaking your operations. Vimico's business transformation consulting rebuilds your operating model, decision rights, organization design, and execution cadence so strategy actually lands in the day-to-day work of your teams. We start with the outcomes you are accountable for — revenue predictability, margin, delivery reliability, customer retention — then reshape the processes, roles, technology, and management rhythm that drive them. Whether you are scaling from 50 to 500 people, integrating an acquisition, standing up a global capability centre, or preparing a PE-backed business for its next stage, we work shoulder-to-shoulder with your leadership team so the new operating model is adopted, measured, and sustained long after the engagement ends.",
     challenges: [
-      "Growth outpacing structure, causing execution breakdowns",
-      "Fragmented delivery organizations lacking a unified operating model",
-      "Unclear governance, roles, and decision rights across leadership tiers",
-      "Underperforming teams and inconsistent business results",
-      "Difficulty converting strategy into repeatable execution",
+      "Growth is outpacing structure, so execution breaks down as headcount and revenue increase",
+      "Teams and business units operate as silos with no shared operating model or common language",
+      "Ownership is blurry — decisions stall because roles, escalation paths, and decision rights are undefined",
+      "Strategy decks never translate into quarterly execution, so priorities drift and results stay inconsistent",
+      "Leaders lack the KPIs, dashboards, and cadences needed to see problems early enough to act",
+      "Cost-to-serve keeps rising while margins and customer experience quietly erode",
     ],
     targetCustomers: [
       "Growth-stage companies scaling to 100+ employees",
@@ -61,11 +62,12 @@ export const practiceAreas: PracticeArea[] = [
       "Higher employee engagement and retention",
     ],
     methodology: [
-      "Discover — Diagnostic interviews, data review, maturity assessment",
-      "Design — Co-create TOM, governance, and org structure with leadership",
-      "Pilot — Test frameworks on a critical business area",
-      "Scale — Roll out enterprise-wide with change management",
-      "Sustain — Cadences, dashboards, and coaching for durable adoption",
+      "Listen and diagnose — we interview your leaders and teams, review your data, and map where value leaks out of the current operating model.",
+      "Agree the outcomes — we translate your strategy into a small set of measurable business outcomes so every design choice has a reason.",
+      "Co-design with your leadership — target operating model, governance, org design, and decision rights are built with your team, never handed over as a template.",
+      "Prove it in one area first — we pilot the new model on a business-critical area, capture the evidence, and refine before scaling.",
+      "Scale with change management — rollout is sequenced with communication, enablement, and manager coaching so adoption sticks.",
+      "Sustain and hand back — cadences, dashboards, and leadership coaching leave your team running the model independently.",
     ],
     engagementModels: [
       "Fixed-scope diagnostic (4–6 weeks)",
