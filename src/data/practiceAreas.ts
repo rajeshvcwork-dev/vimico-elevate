@@ -202,13 +202,14 @@ export const practiceAreas: PracticeArea[] = [
     title: "AI Strategy & Adoption",
     tagline: "Move from AI experimentation to accountable, business-outcome-driven adoption.",
     executiveSummary:
-      "We help leadership teams cut through AI hype and build a pragmatic adoption strategy — identifying high-value use cases, standing up governance, and enabling teams to deploy AI responsibly and measurably.",
+      "An AI strategy is not a list of tools — it is a decision about where artificial intelligence will create measurable value in your business, and how you will govern it. Vimico helps leadership teams cut through generative AI hype and build a pragmatic enterprise AI adoption strategy: where AI belongs in your workflows, which use cases earn funding first, what data and platform foundations are required, and which guardrails keep you compliant and credible. We assess your data maturity, run structured use-case discovery across functions, size the business case for each opportunity, and design the responsible-AI governance that risk, legal, and security teams will sign off on. Then we help you move from scattered pilots to production — with adoption plans, AI literacy programmes for your workforce, and ROI measurement that proves the value to your board.",
     challenges: [
-      "Unclear AI strategy and prioritization",
-      "Scattered pilots with no path to production",
-      "Missing AI governance, risk, and data-quality guardrails",
-      "Workforce anxiety and low AI literacy",
-      "Difficulty measuring AI ROI",
+      "Pressure from the board to 'do something with AI' without a clear, prioritised strategy",
+      "Dozens of disconnected pilots and copilot licences with no path to production or measurable value",
+      "No AI governance, responsible-AI policy, or data-quality guardrails, creating real compliance and reputational risk",
+      "Data foundations are not ready, so promising use cases stall at proof-of-concept",
+      "Teams are anxious about AI replacing their work and AI literacy across the workforce is uneven",
+      "Nobody can answer the simplest question: what returns has our AI spend actually delivered?",
     ],
     targetCustomers: [
       "CXOs defining an enterprise AI agenda",
@@ -237,11 +238,12 @@ export const practiceAreas: PracticeArea[] = [
       "Higher workforce AI literacy and adoption",
     ],
     methodology: [
-      "Discovery — Understand business context and data maturity",
-      "Ideation — Workshop AI opportunities across functions",
-      "Prioritization — Rank on value, feasibility, and risk",
-      "Governance — Define policies, ownership, and controls",
-      "Enablement — Coach teams and deploy pilots",
+      "Understand your business first — we learn your value drivers, workflows, and data maturity before discussing any model or vendor.",
+      "Discover use cases with your teams — cross-functional workshops surface where AI genuinely removes cost, risk, or delay.",
+      "Prioritise with evidence — every opportunity is scored on business value, feasibility, data readiness, and risk, then sized into a business case.",
+      "Set the guardrails — we co-write your responsible-AI policy, governance model, and ownership so adoption is safe and auditable.",
+      "Pilot and prove — we help launch focused pilots with success metrics agreed up front, then decide honestly what scales.",
+      "Enable your people — AI literacy, role-level playbooks, and change support so adoption reaches everyday work, not just a lab.",
     ],
     engagementModels: [
       "AI opportunity sprint (4–6 weeks)",
