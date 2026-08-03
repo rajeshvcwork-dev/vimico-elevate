@@ -15,6 +15,7 @@ export interface Testimonial {
   person_name: string;
   person_title: string | null;
   website_url: string | null;
+  rating: number | null;
   display_order: number;
   published: boolean;
 }
