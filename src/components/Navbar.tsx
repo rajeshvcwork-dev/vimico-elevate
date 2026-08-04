@@ -16,8 +16,8 @@ const Navbar = () => {
     { name: "Domain Purchase", path: "/services/domain-services" },
     { name: "ERP Implementation", path: "/services/erp-implementation" },
     { name: "EPM & Power BI Consulting", path: "/services/powerbi" },
-    { name: "Governance Risk & Compliance", path: "/services/grc" },
     { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
+    { name: "Governance Risk & Compliance", path: "/services/grc" },
     { name: "Website Development & Hosting", path: "/services/website" },
   ];
 
