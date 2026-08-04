@@ -55,11 +55,16 @@ const App = () => (
           <Route path="/services/:slug" element={<PracticeAreaPage />} />
 
           {/* Legacy redirects — map old slugs to new practice areas */}
-          <Route path="/services/agile" element={<Navigate to="/services/erp-implementation" replace />} />
-          <Route path="/services/jira-salesforce" element={<Navigate to="/services/erp-implementation" replace />} />
+          <Route path="/services/agile" element={<Navigate to="/services/agile-transformation" replace />} />
+          <Route path="/services/jira-salesforce" element={<Navigate to="/services/jira-consulting" replace />} />
+          <Route path="/services/jira" element={<Navigate to="/services/jira-consulting" replace />} />
+          <Route path="/services/automation" element={<Navigate to="/services/business-process-automation" replace />} />
+          <Route path="/services/security-audit" element={<Navigate to="/services/information-security-audit" replace />} />
+          <Route path="/services/executive-coaching" element={<Navigate to="/services/portfolio-branding" replace />} />
+          <Route path="/services/consulting" element={<Navigate to="/services/business-technology-consulting" replace />} />
           <Route path="/services/support-setup" element={<Navigate to="/services/erp-implementation" replace />} />
           <Route path="/services/delivery-excellence" element={<Navigate to="/services/erp-implementation" replace />} />
-          <Route path="/services/fpa-epm" element={<Navigate to="/services/powerbi" replace />} />
+          <Route path="/services/fpa-epm" element={<Navigate to="/services/epm" replace />} />
           <Route path="/services/portfolio-sites" element={<Navigate to="/services/website" replace />} />
           <Route path="/services/data-sanity" element={<Navigate to="/services/powerbi" replace />} />
           <Route path="/services/compliance" element={<Navigate to="/services/grc" replace />} />

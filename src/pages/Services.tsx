@@ -7,12 +7,24 @@ import Footer from "@/components/Footer";
 import servicesHero from "@/assets/hero-services.jpg";
 
 import { practiceAreas } from "@/data/practiceAreas";
+import { enterpriseServices } from "@/data/enterprise";
 
-const services = practiceAreas.map((p) => ({
-  title: p.title,
-  description: p.tagline,
-  link: `/services/${p.slug}`,
-}));
+const enterpriseSlugs = new Set(enterpriseServices.map((s) => s.slug));
+
+const services = [
+  ...enterpriseServices.map((s) => ({
+    title: s.title,
+    description: s.tagline,
+    link: `/services/${s.slug}`,
+  })),
+  ...practiceAreas
+    .filter((p) => !enterpriseSlugs.has(p.slug))
+    .map((p) => ({
+      title: p.title,
+      description: p.tagline,
+      link: `/services/${p.slug}`,
+    })),
+];
 
 
 const Services = () => {

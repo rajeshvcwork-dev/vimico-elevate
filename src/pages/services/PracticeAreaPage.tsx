@@ -11,6 +11,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { practiceAreaBySlug } from "@/data/practiceAreas";
+import { enterpriseServiceBySlug } from "@/data/enterprise";
+import EnterpriseServicePage from "./EnterpriseServicePage";
 
 const Section = ({
   title,
@@ -49,7 +51,10 @@ const BulletList = ({ items }: { items: string[] }) => (
 
 const PracticeAreaPage = () => {
   const { slug } = useParams();
+  const enterprise = slug ? enterpriseServiceBySlug(slug) : undefined;
   const area = slug ? practiceAreaBySlug(slug) : undefined;
+
+  if (enterprise) return <EnterpriseServicePage service={enterprise} />;
 
   if (!area) return <Navigate to="/services" replace />;
 

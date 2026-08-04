@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import vimicoLogo from "@/assets/logo-vimico.png";
 
 const Navbar = () => {
@@ -10,15 +9,21 @@ const Navbar = () => {
   const location = useLocation();
 
   const servicesSubmenu = [
-    { name: "AI Strategy Adoption", path: "/services/ai-strategy" },
-    { name: "Business Transformation", path: "/services/business-transformation" },
+    { name: "ERP Implementation & Consulting", path: "/services/erp-implementation" },
+    { name: "Enterprise Performance Management", path: "/services/epm" },
+    { name: "Power BI & Business Intelligence", path: "/services/powerbi" },
+    { name: "AI Strategy & Business AI Adoption", path: "/services/ai-strategy" },
+    { name: "Business Process Automation", path: "/services/business-process-automation" },
+    { name: "Business Transformation Consulting", path: "/services/business-transformation" },
+    { name: "Agile Transformation", path: "/services/agile-transformation" },
+    { name: "Jira & Project Management Consulting", path: "/services/jira-consulting" },
+    { name: "Website Design & Development", path: "/services/website" },
+    { name: "Governance, Risk & Compliance", path: "/services/grc" },
+    { name: "Information Security & Compliance Audits", path: "/services/information-security-audit" },
+    { name: "Portfolio & Leadership Branding", path: "/services/portfolio-branding" },
+    { name: "Business & Technology Consulting", path: "/services/business-technology-consulting" },
     { name: "DomainIQ Insight", path: "/services/domainiq" },
     { name: "Domain Purchase", path: "/services/domain-services" },
-    { name: "ERP Implementation", path: "/services/erp-implementation" },
-    { name: "EPM & Power BI Consulting", path: "/services/powerbi" },
-    { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
-    { name: "Governance Risk & Compliance", path: "/services/grc" },
-    { name: "Website Development & Hosting", path: "/services/website" },
   ];
 
   const productsSubmenu = [
@@ -131,14 +136,6 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hidden md:flex items-center gap-4">
-            <Link to="/contact">
-              <Button variant="gradient" size="default" className="gap-2 rounded-full border-2">
-                Get in Touch
-              </Button>
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-primary-foreground"
@@ -211,13 +208,6 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <div className="px-4 pt-4">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  <Button variant="gradient" size="lg" className="w-full">
-                    Get in Touch
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
         )}

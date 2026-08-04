@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import gripnovaLogo from "@/assets/gripnovaco-logo.png";
+import heroTestimonials from "@/assets/hero-testimonials.jpg";
 
 const localLogos: Record<string, string> = {
   gripnova: gripnovaLogo,
@@ -75,7 +76,17 @@ const Testimonials = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-[600px] pt-20 overflow-hidden bg-gradient-to-br from-vimico-navy via-vimico-navy to-secondary/30">
+      <section className="relative min-h-[600px] pt-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={heroTestimonials}
+            alt="Vimico client testimonials"
+            className="w-full h-full object-cover"
+            width={1536}
+            height={768}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-vimico-navy/95 via-vimico-navy/85 to-vimico-navy/65" />
+        </div>
         <div className="relative z-10 container mx-auto px-4 lg:px-8 py-24 lg:py-32">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <span className="inline-block px-4 py-1.5 rounded-full border-2 bg-primary/20 text-primary-foreground text-sm font-medium mb-6">
@@ -181,7 +192,7 @@ const Testimonials = () => {
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
-                Get in Touch
+                Request a Consultation
               </Button>
             </Link>
           </div>
