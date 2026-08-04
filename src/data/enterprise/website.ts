@@ -4,6 +4,7 @@ import { serviceHeroes } from "./heroes";
 export const service: EnterpriseService = {
   slug: "website",
   title: "Website Design & Development",
+  heroImage: serviceHeroes.website,
   eyebrow: "Corporate Website Design & Development",
   tagline:
     "Your website is often the first and most scrutinised interaction a prospect, investor or candidate has with your business. We design and build corporate websites that translate credibility into qualified enquiries, not just visits.",
