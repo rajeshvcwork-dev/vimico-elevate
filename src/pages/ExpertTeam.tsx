@@ -176,7 +176,7 @@ const ExpertTeam = () => {
             </p>
             <Link to="/contact">
               <Button variant="gradient" size="xl" className="gap-2 rounded-full border-2">
-                Get in Touch Today
+                Request a Consultation
               </Button>
             </Link>
           </div>
