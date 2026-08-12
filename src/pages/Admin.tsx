@@ -10,6 +10,8 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BlogPostsManager from "@/components/admin/BlogPostsManager";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Testimonial } from "./Testimonials";
 
 const ADMIN_USERNAME = "administrator";
@@ -232,7 +234,7 @@ const Admin = () => {
         <p className="text-muted-foreground text-sm mb-6">
           {firstRun
             ? "Set the password for the administrator account. It is stored securely (hashed) in the backend — never in the code."
-            : "Sign in to manage testimonials."}
+            : "Sign in to manage testimonials and blog posts."}
         </p>
         <form onSubmit={firstRun ? handleBootstrap : handleLogin} className="space-y-4">
           <div>
@@ -268,7 +270,7 @@ const Admin = () => {
     <div className="max-w-5xl mx-auto space-y-10">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Testimonials</h1>
+          <h1 className="text-3xl font-bold text-foreground">Content manager</h1>
           <p className="text-muted-foreground text-sm">Signed in as {ADMIN_USERNAME}</p>
         </div>
         <Button variant="outline" className="gap-2 rounded-full border-2" onClick={handleLogout}>
@@ -276,6 +278,13 @@ const Admin = () => {
         </Button>
       </div>
 
+      <Tabs defaultValue="testimonials" className="space-y-8">
+        <TabsList>
+          <TabsTrigger value="testimonials">Testimonials</TabsTrigger>
+          <TabsTrigger value="blogs">Blog posts</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="testimonials" className="space-y-10">
       <form onSubmit={handleSave} className="bg-card rounded-3xl p-8 shadow-card border border-border/50 space-y-5">
         <h2 className="text-xl font-semibold text-foreground">
           {form.id ? "Edit testimonial" : "Add a testimonial"}
@@ -396,6 +405,12 @@ const Admin = () => {
           </div>
         ))}
       </div>
+        </TabsContent>
+
+        <TabsContent value="blogs">
+          <BlogPostsManager />
+        </TabsContent>
+      </Tabs>
     </div>,
   );
 };

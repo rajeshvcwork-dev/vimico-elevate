@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  AlertTriangle,
   ArrowRight,
   Check,
   ChevronRight,
@@ -77,9 +76,7 @@ export const ChallengeCards = ({ items }: { items: ChallengeCard[] }) => (
         key={item.title}
         className="group relative p-6 rounded-2xl bg-card border border-border/60 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_18px_40px_-24px_hsl(var(--primary)/0.5)]"
       >
-        <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-          <AlertTriangle className="w-5 h-5 text-primary" />
-        </div>
+        <span className="block w-10 h-1 rounded-full bg-gradient-to-r from-primary to-secondary mb-4" />
         <h3 className="text-base md:text-lg font-semibold text-foreground mb-2 leading-snug">
           {item.title}
         </h3>
