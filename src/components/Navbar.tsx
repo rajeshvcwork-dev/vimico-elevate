@@ -9,21 +9,15 @@ const Navbar = () => {
   const location = useLocation();
 
   const servicesSubmenu = [
-    { name: "ERP Implementation & Consulting", path: "/services/erp-implementation" },
-    { name: "Enterprise Performance Management", path: "/services/epm" },
-    { name: "Power BI & Business Intelligence", path: "/services/powerbi" },
-    { name: "AI Strategy & Business AI Adoption", path: "/services/ai-strategy" },
-    { name: "Business Process Automation", path: "/services/business-process-automation" },
-    { name: "Business Transformation Consulting", path: "/services/business-transformation" },
-    { name: "Agile Transformation", path: "/services/agile-transformation" },
-    { name: "Jira & Project Management Consulting", path: "/services/jira-consulting" },
-    { name: "Website Design & Development", path: "/services/website" },
-    { name: "Governance, Risk & Compliance", path: "/services/grc" },
-    { name: "Information Security & Compliance Audits", path: "/services/information-security-audit" },
-    { name: "Portfolio & Leadership Branding", path: "/services/portfolio-branding" },
-    { name: "Business & Technology Consulting", path: "/services/business-technology-consulting" },
+    { name: "AI Strategy Adoption", path: "/services/ai-strategy" },
+    { name: "Business Transformation", path: "/services/business-transformation" },
     { name: "DomainIQ Insight", path: "/services/domainiq" },
     { name: "Domain Purchase", path: "/services/domain-services" },
+    { name: "ERP Implementation", path: "/services/erp-implementation" },
+    { name: "EPM & Power BI Consulting", path: "/services/powerbi" },
+    { name: "Executive Coaching & Leadership", path: "/services/executive-coaching" },
+    { name: "Governance Risk & Compliance", path: "/services/grc" },
+    { name: "Website Development & Hosting", path: "/services/website" },
   ];
 
   const productsSubmenu = [
