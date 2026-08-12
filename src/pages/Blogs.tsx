@@ -1,12 +1,33 @@
-import { Linkedin, ExternalLink, TrendingUp, Users } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Linkedin, ExternalLink, TrendingUp, Users, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import type { Tables } from "@/integrations/supabase/types";
 import heroMarketing from "@/assets/hero-marketing.jpg";
 
+type BlogPost = Tables<"blog_posts">;
+
 const Blogs = () => {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .eq("published", true)
+        .order("display_order", { ascending: true })
+        .order("published_at", { ascending: false });
+      setPosts(data ?? []);
+      setLoading(false);
+    })();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -67,38 +88,81 @@ const Blogs = () => {
             </p>
           </div>
 
-          {/* LinkedIn Embed Placeholder */}
           <div className="max-w-3xl mx-auto">
-            <div className="bg-card rounded-3xl p-8 shadow-card border border-border/50 animate-fade-up">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-16 h-16 rounded-xl bg-[#0077B5] flex items-center justify-center">
-                  <Linkedin className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground">Vimico on LinkedIn</h3>
-                  <p className="text-muted-foreground">Top Trending Posts</p>
-                </div>
+            {loading && (
+              <div className="flex justify-center py-10">
+                <Loader2 className="w-6 h-6 animate-spin text-primary" />
               </div>
-              
-              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
-                <p className="text-muted-foreground">
-                  VIMICO Don't Just Implement Jira, we Hand You the Keys to a Self-Driving Engine.
-                </p>
-              </div>
+            )}
 
-              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
-                <p className="text-muted-foreground">
-                  The era of "Big Bang" launches is dead. Agile is here to simplify MVP releases.
-                </p>
-              </div>
+            {!loading && posts.length === 0 && (
+              <p className="text-center text-muted-foreground mb-8">
+                New posts are on the way — follow us on LinkedIn in the meantime.
+              </p>
+            )}
 
-              <div className="bg-muted/50 rounded-2xl p-6 mb-4">
-                <p className="text-muted-foreground">
-                  The biggest skill gap inside organizations has nothing to do with tools, processes, or technology?
-                </p>
-              </div>
+            <div className="space-y-6">
+              {posts.map((post) => (
+                <article
+                  key={post.id}
+                  className="bg-card rounded-3xl p-8 shadow-card border border-border/50 animate-fade-up"
+                >
+                  {post.cover_image_url && (
+                    <img
+                      src={post.cover_image_url}
+                      alt={post.title}
+                      loading="lazy"
+                      className="w-full h-56 object-cover rounded-2xl mb-6"
+                    />
+                  )}
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{post.title}</h3>
+                  <div className="text-sm text-muted-foreground mb-4">
+                    {new Date(post.published_at).toLocaleDateString(undefined, {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                    {post.author ? ` · ${post.author}` : ""}
+                  </div>
+                  {post.excerpt && (
+                    <p className="text-muted-foreground mb-4">{post.excerpt}</p>
+                  )}
+                  {post.content && (
+                    <div className="text-foreground/90 whitespace-pre-line leading-relaxed">
+                      {post.content}
+                    </div>
+                  )}
+                  {post.tags?.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-5">
+                      {post.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  {post.linkedin_url && (
+                    <a
+                      href={post.linkedin_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex mt-6"
+                    >
+                      <Button variant="outline" className="gap-2 rounded-full border-2">
+                        <Linkedin className="w-4 h-4" />
+                        View on LinkedIn
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
 
-              <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center mt-10">
                 <a 
                   href="https://www.linkedin.com/company/vimico-org/posts/?feedView=all"
                   target="_blank" 
@@ -110,7 +174,6 @@ const Blogs = () => {
                     <ExternalLink className="w-4 h-4" />
                   </Button>
                 </a>
-              </div>
             </div>
           </div>
         </div>
