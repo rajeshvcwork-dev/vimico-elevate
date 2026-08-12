@@ -5,7 +5,7 @@ const ADMIN_EMAIL = "administrator@vimico.in";
 Deno.serve(async (req) => {
   if (req.method !== "POST") return new Response("Method not allowed", { status: 405 });
   const secret = req.headers.get("x-reset-token");
-  if (secret !== Deno.env.get("SUPABASE_DB_URL")?.slice(-12)) {
+  if (secret !== Deno.env.get("ADMIN_RESET_TOKEN")) {
     return new Response("Forbidden", { status: 403 });
   }
   const { password } = await req.json();
