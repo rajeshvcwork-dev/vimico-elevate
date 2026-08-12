@@ -6,25 +6,27 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import servicesHero from "@/assets/hero-services.jpg";
 
-import { practiceAreas } from "@/data/practiceAreas";
-import { enterpriseServices } from "@/data/enterprise";
+import { practiceAreaBySlug } from "@/data/practiceAreas";
+import { enterpriseServiceBySlug } from "@/data/enterprise";
 
-const enterpriseSlugs = new Set(enterpriseServices.map((s) => s.slug));
-
-const services = [
-  ...enterpriseServices.map((s) => ({
-    title: s.title,
-    description: s.tagline,
-    link: `/services/${s.slug}`,
-  })),
-  ...practiceAreas
-    .filter((p) => !enterpriseSlugs.has(p.slug))
-    .map((p) => ({
-      title: p.title,
-      description: p.tagline,
-      link: `/services/${p.slug}`,
-    })),
+const MENU_SERVICES: Array<{ slug: string; title: string }> = [
+  { slug: "ai-strategy", title: "AI Strategy Adoption" },
+  { slug: "business-transformation", title: "Business Transformation" },
+  { slug: "domainiq", title: "DomainIQ Insight" },
+  { slug: "domain-services", title: "Domain Purchase" },
+  { slug: "erp-implementation", title: "ERP Implementation" },
+  { slug: "powerbi", title: "EPM & Power BI Consulting" },
+  { slug: "executive-coaching", title: "Executive Coaching & Leadership" },
+  { slug: "grc", title: "Governance Risk & Compliance" },
+  { slug: "website", title: "Website Development & Hosting" },
 ];
+
+const services = MENU_SERVICES.map(({ slug, title }) => ({
+  title,
+  description:
+    enterpriseServiceBySlug(slug)?.tagline ?? practiceAreaBySlug(slug)?.tagline ?? "",
+  link: `/services/${slug}`,
+}));
 
 
 const Services = () => {
