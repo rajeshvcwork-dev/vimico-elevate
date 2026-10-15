@@ -63,7 +63,7 @@ const Blogs = () => {
               Our latest writing on transformation, delivery, analytics and leadership — published regularly on LinkedIn.
             </p>
             <a 
-              href="https://www.linkedin.com/company/vimico-org" 
+              href="https://www.linkedin.com/company/109905623/admin/page-posts/published/" 
               target="_blank" 
               rel="noopener noreferrer"
             >
