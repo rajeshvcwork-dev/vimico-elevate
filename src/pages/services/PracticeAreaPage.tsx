@@ -124,7 +124,7 @@ const PracticeAreaPage = () => {
           </p>
           {area.slug === "domainiq" && (
             <a
-              href="https://domainiqinsight.com/"
+              href="https://domainiqinsight.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-8"
